@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" >
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script> -->
+    <title>Welcome to Chessons</title>
+</head>
+<body>
+    <!-- Rendered Navigation from js -->
+    <div id="navigation"></div>
+
+    <!-- This is the main content area -->
+    <div class="home-container">
+        <div class="app-header">
+            <div class="filter-layer"></div>
+            <div class="head-title">
+                <h1>Chartered Certified Accountants / Business Consultants</h1>
+                <p>Supporting your Business</p>
+                <p>by Adding Value.</p>
+                <button onclick="requestRouting('./consultation.html')">Request Free Consultation</button>
+            </div>
+        </div>
+        <!-- Services Section -->
+        <div class="services-section">
+            <h1 attr="service-head">Things We Do</h1>
+            <div class="service-wrapper">
+                <div class="service">
+                    <i class="fas fa-book"></i>
+                    <h1>Accounting / Bookkeeping</h1>
+                    <a href="">see all</a>
+                </div>
+                <div class="service">
+                    <i class="fas fa-chart-line"></i>
+                    <h1>Business Startup / Payroll</h1>
+                    <a href="">see all</a>
+                </div>
+                <div class="service">
+                    <i class="fas fa-tasks"></i>
+                    <h1>Income Tax / Self-Assessment</h1>
+                    <a href="">see all</a>
+                </div>
+                <div class="service">
+                    <i class="fas fa-building"></i>
+                    <h1>Business Tax / Company Formation</h1>
+                    <a href="">see all</a>
+                </div>
+            </div>
+        </div>
+        <!-- Center Image Display -->
+        <div class="center-image">
+            <div class="display-image-left">
+                <img class="small" src="assets/images/biz-small.jpeg" alt="">
+                <img class="medium" src="assets/images/biz-medium.jpeg" alt="">
+            </div>
+            <div class="display-image-right">
+                <img class="small" src="assets/images/biz-2-small.jpeg" alt="">
+                <img class="medium" src="assets/images/biz-2-medium.jpeg" alt="">
+            </div>
+        </div>
+        <!-- Who we serve section -->
+        <div class="audience">
+            <h1 attr="title">Who We Serve</h1>
+            <div class="audience-wrapper">
+                <div class="player">
+                <span class="icon">
+                    <i class="fas fa-user"></i>
+                </span>
+                <span class="wording">
+                    <h1>Sole-Trader / Self-Employed</h1>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quia culpa architecto magni officiis facilis? </small>
+                </span>
+                </div>
+                <div class="player">
+                    <span class="icon">
+                        <i class="far fa-building"></i>
+                    </span>
+                    <span class="wording">
+                    <h1>Limited Companies</h1>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quia culpa architecto magni officiis facilis? </small>
+                    </span>
+                </div>
+                <div class="player">
+                    <span class="icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </span>
+                    <span class="wording">
+                    <h1>Partnership / Joint Business</h1>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quia culpa architecto magni officiis facilis? </small>
+                    </span>
+                </div>
+            </div>
+        </div>
+                
+        <!-- Your choices -->
+        <div class="choices">
+            <img src="assets/images/accounting.jpg" alt="">
+            <div class="text-control">
+                <h2>We let you decide when and how we work for you</h2>
+                <p>
+                If your business is used to doing everything online, then great because so are we.
+                    If you prefer to talk to someone on the phone, then your dedicated accountant is always on hand.
+                    Or if you prefer to go over the details in person, then you're able to .
+                    All of our services come with unlimited help and support provided at no extra cost throughout the entire year.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Call Back Section -->
+        <div class="call-back-form">
+            <h1>Let Us Call You</h1>
+            <p>Please enter your name and number, one of our expert will call you</p>
+            <div class="form">
+
+                <div class="form-field">
+                    <input id="ccallName" type="text" placeholder="Name">
+                    <input id="ccallPhone" type="telephone" placeholder="Phone Number">
+                </div>
+                <a id="callBack" type="button">Call me back</a>
+            </div>
+        </div>
+                
+        <!-- Why Customer Prefer Us -->
+        <div class="why-us">
+        <div class="why-us-wrapper">
+            <h1>Why Customer Prefered Us?</h1>
+            <img src="assets/images/accountant.png" alt="">
+            <div class="reason">
+                <span>
+                    <i class="fas fa-check"></i>
+                    <p>Fixed monthly fees</p>
+                </span>
+                <span>
+                    <i class="fas fa-check"></i>
+                    <p>Your own dedicated accountant</p>
+                </span>
+                <span>
+                    <i class="fas fa-check"></i>
+                    <p>Monthly payment by direct debit</p>
+                </span>
+                <span>
+                    <i class="fas fa-check"></i>
+                    <p>Unlimited help and advise</p>
+                </span>
+                <span>
+                    <i class="fas fa-check"></i>
+                    <p>Engage with us however suites your business</p>
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="textimony"></div>
+    <div id="footer"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mob-menu" class="mobile-menu">
+        <!-- <i onclick="closeMenu()" attr="close-ic" class="fas fa-times"></i> -->
+        <i class="material-icons" attr="close-ic" onclick="closeMenu()">close</i>
+        <div class="menu-items">
+            <a href="" onclick="closeMenu()">Home</a>
+            <a href="./about.html#About" onclick="closeMenu()">About</a>
+            <a href="./services.html" onclick="closeMenu()">Services</a>
+            <a href="./consultation.html">Fee Consultation</a>
+            <a href="./contact.html" onclick="closeMenu()">Contact</a>
+        </div>
+    </div>
+    <!-- User data submit respond -->
+    <div id="respond" class="respond"></div>
+    <script async src="main.js"></script>
+</body>
+</html>

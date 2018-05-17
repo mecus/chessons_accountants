@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebse.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/src/**",
+      "gulpfile.js"
+    ]
+  }
+}

@@ -1,0 +1,280 @@
+  // Footer section
+  .footer{
+    position: relative;
+    background-color: #1D3557;
+    height: 280px;
+    overflow: hidden;
+    img{
+        width: 500px;
+        height: 280px;
+        opacity: .5;
+    }
+    .company-info{
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 340px;
+          margin-left: -170px;
+          // display: flex;
+        .about-us{
+          display: none;
+        }
+        .contacts{
+          position: relative;
+          top: 0;
+          // left: 50%;
+          // width: 340px;
+          // margin-left: -170px;
+          background-color: rgba(255, 153, 0, .9);
+          height: 180px;
+          margin-top: 20px;
+          padding-bottom: 10px;
+          h1{
+              // color: darkgray;
+              font-size: 1.5em;
+              padding-left: 10px;
+              padding-top: 10px;  
+          }
+          h2, p{
+              padding: 0;
+              margin: 0;
+              padding-left: 20px;
+          }
+          p{
+              padding-left: 10px;  
+          }
+          p[attr=tel]{
+              padding-top: 10px;
+          }
+        }
+    }
+    .socials{
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // background-color: #345578;
+      left: 50%;
+      width: 340px;
+      margin-left: -170px;
+      margin-bottom: 10px;
+      i{
+          font-size: 1.8em;
+          border: 2px solid #ffffff;
+          padding: 8px;
+          border-radius: 15px;
+          color: #ffffff;
+          opacity: .7;
+      }
+    }
+    
+}
+.slim-footer{
+    height: 40px;
+    width: 100%;
+    background-color: #35414C;
+
+    span{
+        display: flex;
+        padding: 0 20px;
+        p{
+            color: lightgrey;
+            font-size: .8em;
+            line-height: 40px;
+            margin: 0;
+            padding: 0;
+        }
+        i{
+            color: lightgrey;
+            line-height: 40px;
+            margin-right: 5px;
+        }
+    }
+}
+
+  /* Portrait and Landscape  for Table */
+  @media only screen 
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    // Footer section
+    .footer{
+        height: 300px;
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        .company-info{
+            width: 500px;
+            margin-left: -250px;
+            .about-us{
+            display: none;
+            }
+            .contacts{
+            height: 200px;
+            h1{
+                padding-left: 10px;
+                padding-top: 10px;  
+            }
+            h2, p{
+                padding-left: 20px;
+                
+            }
+            p{
+                padding-left: 10px; 
+                font-size: 1.2em; 
+            }
+            p[attr=tel]{
+                padding-top: 10px;
+            }
+            }
+        }
+        .socials{
+        width: 340px;
+        margin-left: -170px;
+        margin-bottom: 15px;
+        i{
+            font-size: 1.8em;
+            border: 2px solid #ffffff;
+            padding: 8px;
+            border-radius: 15px;
+            color: #ffffff;
+            opacity: .7;
+        }
+        }
+        
+    }
+    .slim-footer{
+        height: 40px;
+        width: 100%;
+        background-color: #35414C;
+
+        span{
+            display: flex;
+            padding: 0 20px;
+            p{
+                color: lightgrey;
+                font-size: .8em;
+                line-height: 40px;
+                margin: 0;
+                padding: 0;
+            }
+            i{
+                color: lightgrey;
+                line-height: 40px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+  /* Portrait and Landscape  for Desktop */
+@media only screen 
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    .footer{
+        position: relative;
+        background-color: #1D3557;
+        height: 450px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 450px;
+            opacity: .5;
+        }
+        .company-info{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 80%;
+            margin-left: -40%;
+            display: flex;
+            justify-content: space-between;
+            .about-us{
+              display: block;
+              background-color: rgba(255, 255, 224, .6);
+              margin-right: 120px;
+              margin-top: 40px;
+              padding: 20px;
+            }
+            .contacts{
+            position: relative;
+            top: 0;
+            // left: 50%;
+            // width: 340px;
+            // margin-left: -170px;
+            background-color: rgba(255, 153, 0, .9);
+            height: 250px;
+            margin-top: 40px;
+            padding-bottom: 10px;
+            padding: 20px;
+            h1{
+                // color: darkgray;
+                font-size: 1.2em;
+                padding-left: 10px;
+                padding-top: 10px;  
+            }
+            h2, p{
+                padding: 0;
+                margin: 0;
+                padding-left: 20px;
+            }
+            h2{
+                font-size: 1em;
+            }
+            p{
+                padding-left: 10px; 
+                font-size: 1em; 
+            }
+            p[attr=tel]{
+                padding-top: 10px;
+            }
+            }
+        }
+        .socials{
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          // background-color: #345578;
+          left: 50%;
+          width: 340px;
+          margin-left: -170px;
+          margin-bottom: 20px;
+          i{
+              font-size: 1.8em;
+              border: 2px solid #ffffff;
+              padding: 8px;
+              border-radius: 15px;
+              color: #ffffff;
+              opacity: .7;
+          }
+        }
+        
+    }
+    .slim-footer{
+        height: 40px;
+        width: 100%;
+        background-color: #35414C;
+    
+        span{
+            display: flex;
+            padding: 0 20px;
+            p{
+                color: lightgrey;
+                font-size: .8em;
+                line-height: 40px;
+                margin: 0;
+                padding: 0;
+            }
+            i{
+                color: lightgrey;
+                line-height: 40px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

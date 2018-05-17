@@ -1,0 +1,175 @@
+.consultation-container{
+    .consultation{
+        padding: 20px;
+        h1{} h2{}
+        ol li{
+            padding: 10px 5px;
+            border-bottom: 1px solid lightgray;
+        }
+        p{font-size: 0.8em; font-weight: bold;}
+       
+    }
+    .consultation-form{
+        h1{
+            padding-left: 20px;
+        }
+        form{
+            padding: 20px;
+            .consult-form-group{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                label{
+                    width: 110px;
+                    margin-right: 10px;
+                    padding: 5px;
+                }
+                input, textarea{
+                    border: 1px solid lightgrey;
+                    padding: 5px;
+                    margin: 5px 0px;
+                    width: 100%;
+                    font-size: 1em;
+                }
+                a#cButton{
+                    width: 100%;
+                    height: 35px;
+                    font-size: 1.5em;
+                    background-color: #FF9900;
+                    border-color: #FF9900;
+                    margin-top: 10px;
+                    padding: 5px;
+                    text-align: center;
+                    line-height: 35px;
+                    color: #000000;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Tablet Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .consultation-container{
+        .consultation{
+            h1{font-size: 2em;} h2{font-size: 1.5em;}
+            ol li{
+                font-size: 1.5em;
+                padding: 10px 5px;
+            }
+            ol{
+                margin-bottom: 40px;
+            }
+            p{font-size: 1.2em; font-weight: bold;}
+           
+        }
+        .consultation-form{
+            h1{
+                padding-left: 40px;
+            }
+            form{
+                padding: 20px;
+                .consult-form-group{
+                    label{
+                        width: 140px;
+                        margin-right: 10px;
+                        padding: 10px;
+                        font-size: 1.5em;
+                        font-weight: bold;
+                    }
+                    input, textarea{
+                        border: 1px solid lightgrey;
+                        padding: 10px;
+                        margin: 5px 0px;
+                        width: 100%;
+                        font-size: 1.5em;
+                    }
+                    a#cButton{
+                        width: 100%;
+                        height: 40px;
+                        font-size: 1.5em;
+                        background-color: #FF9900;
+                        border-color: #FF9900;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        padding: 5px;
+                        text-align: center;
+                        line-height: 40px;
+                        color: #000000;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+    /* Desktop Portrait and Landscape */
+@media only screen 
+and (min-device-width: 1200px) 
+and (max-device-width: 1600px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .consultation-container{
+        padding: 0px 20%;
+        .consultation{
+            h1{font-size: 1.6em;} h2{font-size: 1em;}
+            ol li{
+                font-size: 1em;
+                padding: 20px 5px;
+                border: none;
+            }
+            ol{
+                margin-bottom: 40px;
+            }
+            p{font-size: 1.1em; font-weight: bold;}
+           
+        }
+        .consultation-form{
+            h1{
+                padding-left: 20px;
+                margin: 20px 0px;
+            }
+            form{
+                padding: 20px;
+                .consult-form-group{
+                    label{
+                        width: 140px;
+                        margin-right: 10px;
+                        padding: 10px;
+                        font-size: 1em;
+                        font-weight: bold;
+                    }
+                    input, textarea{
+                        border: 1px solid lightgrey;
+                        padding: 10px;
+                        margin: 5px 0px;
+                        width: 100%;
+                        font-size: 1em;
+                    }
+                    a#cButton{
+                        width: 100%;
+                        height: 40px;
+                        font-size: 1.5em;
+                        background-color: #FF9900;
+                        border-color: #FF9900;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        padding: 5px;
+                        text-align: center;
+                        line-height: 40px;
+                        color: #000000;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,903 @@
+.app-header{
+    position: relative;
+    height: 300px;
+    background: #345578;
+    background-image: url('./assets/images/top_cpa_firm.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .filter-layer{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 300px; // alter
+        background-color: #345578;
+        opacity: .8;
+    }
+    .head-title{
+        position: relative;
+        top: 30%;
+        text-align: center;
+        h1{
+            color: #ffffff;
+            font-size: 1.5em; 
+            padding: 0 50px;
+            opacity: 0.9;
+        }
+        p{
+            color: #FF9900;
+            margin: 0;
+            padding: 0;
+            opacity: 1;
+            
+        }
+        button{
+            margin-top: 10px;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            font-size: 1.1em;
+            font-weight: 400;
+            padding: 10px 10px;
+            font-family: 'Lato', 'Roboto';
+            // border-radius: 10px;
+        }
+    }
+}
+// Services Sections
+.services-section{
+    background-color: #BC204B;
+    // height: 300px;
+    width: 100%;
+    // Hiding the h1 tag only display on desktop
+    h1[attr=service-head]{
+        display: none;
+    }
+    
+    .service-wrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        .service{
+            text-align: center;
+            padding-top: 15%;
+            padding-bottom: 10%;
+            i{
+                font-size: 3em;
+                color: #BC204B;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            h1{
+                font-size: 1.2em;
+                color: #ffffff;
+                padding: 10px;
+            }
+        }
+        .service:nth-child(1){
+            background-color: #1D3557;
+        }
+        .service:nth-child(2){
+            background-color: #1D3557;
+        }
+        .service:nth-child(3){
+            background-color: #1D3557;
+        }
+        .service:nth-child(4){
+            background-color: #1D3557;
+        }
+    }
+}
+// Dispaly Center Image
+.center-image{
+    display: flex;
+    flex-direction: row;
+    // height: 400px;
+    .display-image-left{
+        background: #345578;
+        img.medium{
+            display: none;
+        }
+        img{
+            width: 100%;
+            opacity: .5;
+        }
+        // background-image: url('assets/images/ARC.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+    }
+    .display-image-right{
+        background: #345578;
+        img.medium{
+            display: none;
+        }
+        img{
+            width: 100%;
+            opacity: .5;
+        }
+        // background-image: url('assets/images/image_5.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+    }
+}
+// Audience
+.audience{
+    background-color: #345578;
+    // height: 650px;
+    text-align: center;
+    h1[attr=title]{
+        font-size: 1.5em;
+        color: #FF9900;
+        padding: 10px 0px;
+    }
+    .audience-wrapper{
+        display: flex;
+        flex-direction: column;
+        .player{
+            display: flex;
+            flex-direction: row;
+            background-color: #1D3557;
+            height: 120px;
+            margin-bottom: 5px;
+            padding-right: 10px;
+            .icon  {
+                flex: 2;
+                i{
+                    font-size: 4em;
+                    color: #FF9900;
+                    padding-top: 20px;
+                }
+            }
+            .wording{
+                flex: 5;
+                text-align: left;
+                h1{
+                    font-size: 1.2em;
+                    color: #BC204B;
+                    padding-top: 10px;
+                }
+                small{ color: #ffffff; }
+            }
+        }
+        .player:nth-child(3){
+            margin-bottom: 0px;
+        }
+    }
+}
+// Your Choices
+.choices{
+    position: relative;
+    background: #345578;
+    height: 280px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 280px;
+    }
+    .text-control{
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        text-align: center;
+        h2{
+            color: #ffffff;
+            font-size: 1.1em;
+            text-align: center;
+            padding: 0 20px;
+        }
+        p{
+            color: #ffffff;
+            padding: 5px 10px;
+        }
+    }
+    // background-image: image('assets/images/accounting.jpg');
+    // background-size: cover;
+}
+
+// Call Back Form Section
+.call-back-form{
+    width: 100%;
+    // height: 300px;
+    background-color: #345578;
+    text-align: center;
+    padding: 20px 0px;
+    h1{
+        color: #ffffff;
+        font-size: 1.5em;
+    }
+    p{
+        color: #ffffff;
+    }
+    .form{
+        position: relative;
+        width: 350px;
+        // text-align: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        .form-field{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            input{
+                flex: 1;
+                height: 30px;
+                font-size: 1em;
+                border: 1px solid #FF9900;
+                width: 100%;
+                padding-left: 5px;
+            }
+            input:nth-child(1){
+                // margin-right: 5px;
+            }
+        }
+        a#callBack{
+            background-color: #BC204B;
+            font-size: 1.2em;
+            color: #ffffff;
+            border-color: #BC204B;
+            padding: 5px;
+            // width: 100%;
+            // text-align: center;
+        }
+    }
+}
+// Why Customer Prefer Us
+.why-us{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #BC204B;
+    z-index: 1;
+    h1{
+        color: #ffffff;
+        font-size: 1.3em;
+        padding: 15px 5px 5px 10px;
+    }
+    img{
+        position: absolute;
+        // top: 10%;
+        right: 0;
+        bottom: 0;
+        width: 200px;z-index: -1;
+        opacity: .5;
+    }
+    .reason{
+        padding-left: 30px;
+        span{
+            display: flex;
+            i{
+                margin-right: 5px;
+                color: #ffffff;
+            }
+            p{
+                color: #ffffff;
+                font-size: .8em;
+            }
+        }
+    }
+}
+
+
+
+
+/* Tablet Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .app-header{
+        position: relative;
+        height: 500px; // alter
+        background: #345578;
+        background-image: url('assets/images/top_cpa_firm.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        .filter-layer{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 500px; // alter
+            background-color: #345578;
+            opacity: .8;
+        }
+        .head-title{
+            position: relative;
+            top: 40%; // alter
+            text-align: center;
+            h1{
+                color: #ffffff;
+                font-size: 2.5em; // alter
+                padding: 0 50px;
+                opacity: 0.9;
+            }
+            p{
+                // color: #ffffff;
+                margin: 0;
+                padding: 0;
+                opacity: 0.8;
+                font-size: 1.5em; // alter
+            }
+            button{
+                margin-top: 10px;
+                background-color: transparent;
+                // border: 1px solid #BC204B;
+                // color: #BC204B;
+                font-size: 2em; // alter
+                font-weight: bold;
+                // padding: 5px 30px;
+                // width: 100%;
+                // border-radius: 10px;
+            }
+        }
+    }
+    // Services Sections
+    .services-section{
+        background-color: #BC204B;
+        // height: 300px;
+        width: 100%;
+        .service-wrapper{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5px;
+            .service{
+                text-align: center;
+                padding-top: 15%;
+                padding-bottom: 10%;
+                i{
+                    font-size: 5em;
+                    color: #BC204B;
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+                h1{
+                    font-size: 2em;
+                    color: #ffffff;
+                    padding: 10px;
+                }
+                a{
+                    font-size: 1.5em;
+                }
+            }
+            .service:nth-child(1){
+                background-color: #1D3557;
+            }
+            .service:nth-child(2){
+                background-color: #1D3557;
+            }
+            .service:nth-child(3){
+                background-color: #1D3557;
+            }
+            .service:nth-child(4){
+                background-color: #1D3557;
+            }
+        }   
+    }
+    // Dispaly Center Image
+    .center-image{
+        display: flex;
+        flex-direction: row;
+        // height: 400px;
+        .display-image-left{
+            background: #345578;
+            img.medium{
+                display: block;
+            }
+            img.small{
+                display: none;
+            }
+            img{
+                width: 100%;
+                opacity: .5;
+            }
+            // background-image: url('assets/images/ARC.jpg');
+            // background-repeat: no-repeat;
+            // background-size: cover;
+        }
+        .display-image-right{
+            background: #345578;
+            img.medium{
+                display: block;
+            }
+            img.small{
+                display: none;
+            }
+            img{
+                width: 100%;
+                opacity: .5;
+            }
+            // background-image: url('assets/images/image_5.jpg');
+            // background-repeat: no-repeat;
+            // background-size: cover;
+        }
+    }
+   // Audience
+    .audience{
+        background-color: #345578;
+        // height: 650px;
+        text-align: center;
+        h1[attr=title]{
+            font-size: 2em; // Alter
+            color: #FF9900;
+            padding: 10px 0px;
+        }
+        .audience-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .player{
+                display: flex;
+                flex-direction: column;
+                background-color: #1D3557;
+                height: 300px;
+                margin-bottom: 5px;
+                padding-right: 10px;
+                margin: 10px;
+                .icon  {
+                    flex: 2;
+                    i{
+                        font-size: 4em;
+                        color: #FF9900;
+                        padding-top: 20px;
+                    }
+                }
+                .wording{
+                    text-align: center;
+                    h1{
+                        font-size: 1.6em;
+                        color: #BC204B;
+                        padding-top: 10px;
+                        padding: 10px;
+                    }
+                    small{ color: #ffffff; font-size: 1.1em; padding: 5px;}
+                }
+            }
+            .player:nth-child(3){
+                margin-bottom: 0px;
+            }
+        }
+    }
+    // Your Choices
+    .choices{
+        position: relative;
+        background: #345578;
+        height: 350px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 350px;
+        }
+        .text-control{
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            h2{
+                color: #ffffff;
+                font-size: 2em;
+                text-align: center;
+                padding: 0 20px;
+            }
+            p{
+                color: #ffffff;
+                padding: 5px 20px;
+                font-size: 1.5em;
+            }
+        }
+        // background-image: image('assets/images/accounting.jpg');
+        // background-size: cover;
+    }
+
+    // Call Back Form Section
+    .call-back-form{
+        width: 100%;
+        // height: 300px;
+        background-color: #345578;
+        text-align: center;
+        padding: 40px 0px;
+        h1{
+            color: #ffffff;
+            font-size: 2.4em;
+        }
+        p{
+            color: #ffffff;
+            font-size: 1.4em;
+        }
+        .form{
+            position: relative;
+            width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            .form-field{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                input{
+                    flex: 1;
+                    height: 50px;
+                    font-size: 1.5em;
+                    border: 1px solid #FF9900;
+                    width: 100%;
+                    padding-left: 5px;
+                }
+                input:nth-child(1){
+                    // margin-right: 5px;
+                }
+            }
+            a#callBack{
+                width: 100%;
+                background-color: #BC204B;
+                font-size: 2em;
+                color: #ffffff;
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+    }
+    // Why Customer Prefer Us
+    .why-us{
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-color: #BC204B;
+        z-index: 1;
+        h1{
+            color: #ffffff;
+            font-size: 2em;
+            padding: 20px 5px 5px 20px;
+        }
+        img{
+            position: absolute;
+            // top: 10%;
+            right: 0;
+            bottom: 0;
+            width: 300px;z-index: -1;
+            opacity: .5;
+        }
+        .reason{
+            padding-left: 40px;
+            span{
+                display: flex;
+                i{
+                    margin-right: 10px;
+                    color: #ffffff;
+                    font-size: 1.5em;
+                }
+                p{
+                    color: #ffffff;
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+
+}
+
+/* Desktop Portrait and Landscape */
+@media only screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+
+    .app-header{
+        position: relative;
+        height: 600px; // alter
+        background: #345578;
+        background-image: url('assets/images/top_cpa_firm.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        .filter-layer{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 600px; // alter
+            background-color: #1D3557;
+            opacity: .8;
+        }
+        .head-title{
+            position: relative;
+            top: 36%; // alter
+            text-align: center;
+            padding: 0 200px;
+            h1{
+                color: #ffffff;
+                font-size: 2.5em; // alter
+                padding: 0 50px;
+                opacity: 0.9;
+            }
+            p{
+                // color: #ffffff;
+                margin: 0;
+                padding: 0;
+                opacity: 0.8;
+                font-size: 1.2em; // alter
+            }
+            button{
+                margin-top: 10px;
+                background-color: transparent;
+                border: 1px solid #ffffff;
+                color: #ffffff;
+                font-size: 1.2em; // alter
+                font-weight: bold;
+                padding: 10px 20px;
+                // width: 100%;
+                // border-radius: 10px;
+            }
+        }
+    }
+    // Services Sections
+    .services-section{
+        background-color: #1D3557;
+        // height: 300px;
+        width: 100%;
+        padding: 40px 0px;
+        h1[attr=service-head]{
+            display: block;
+            text-align: center;
+            background-color: #1D3557;
+            padding: 0;
+            margin: 0;
+            color: #ffffff;
+            padding: 20px 0;
+            font-size: 2em;
+        }
+        .service-wrapper{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 0px;
+            width: 80%;
+            margin: 0 auto;
+            .service{
+                text-align: center;
+                padding-top: 15%;
+                padding-bottom: 10%;
+                i{
+                    font-size: 4em;
+                    color: #BC204B;
+                    text-align: center;
+                    margin-bottom: 5px;
+                    border: 2px solid #BC204B;
+                    padding: 50px;
+                    border-radius: 50%;
+                }
+                h1{
+                    font-size: 1.2em;
+                    color: #ffffff;
+                    padding: 10px 50px;
+                }
+                a{
+                    font-size: 1.5em;
+                    display: none;
+                }
+            }
+            .service:nth-child(1){
+                background-color: #1D3557;
+            }
+            .service:nth-child(2){
+                background-color: #1D3557;
+            }
+            .service:nth-child(3){
+                background-color: #1D3557;
+            }
+            .service:nth-child(4){
+                background-color: #1D3557;
+            }
+        }
+    }
+    // Dispaly Center Image
+    .center-image{
+        display: flex;
+        flex-direction: row;
+        // height: 400px;
+        .display-image-left{
+            background: #345578;
+            img.medium{
+                display: block;
+            }
+            img.small{
+                display: none;
+            }
+            img{
+                width: 100%;
+                opacity: .5;
+            }
+            // background-image: url('assets/images/ARC.jpg');
+            // background-repeat: no-repeat;
+            // background-size: cover;
+        }
+        .display-image-right{
+            background: #345578;
+            img.medium{
+                display: block;
+            }
+            img.small{
+                display: none;
+            }
+            img{
+                width: 100%;
+                opacity: .5;
+            }
+            // background-image: url('assets/images/image_5.jpg');
+            // background-repeat: no-repeat;
+            // background-size: cover;
+        }
+    }
+   // Audience
+    .audience{
+        background-color: #345578;
+        // height: 650px;
+        text-align: center;
+        padding: 40px 0px;
+        h1[attr=title]{
+            font-size: 2em; // Alter
+            color: #FF9900;
+            padding: 10px 0px;
+        }
+        .audience-wrapper{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80%;
+            margin: 0 auto;
+            .player{
+                display: flex;
+                flex-direction: column;
+                background-color: #1D3557;
+                height: 300px;
+                width: 250px;
+                margin-bottom: 5px;
+                padding-right: 10px;
+                margin: 10px;
+                .icon  {
+                    flex: 2;
+                    i{
+                        font-size: 4em;
+                        color: #FF9900;
+                        padding-top: 20px;
+                    }
+                }
+                .wording{
+                    text-align: center;
+                    h1{
+                        font-size: 1.6em;
+                        color: #BC204B;
+                        padding-top: 10px;
+                        padding: 10px;
+                    }
+                    small{ color: #ffffff; font-size: 1.1em; padding: 5px;}
+                }
+            }
+            .player:nth-child(3){
+                margin-bottom: 0px;
+            }
+        }
+    }
+    // Your Choices
+    .choices{
+        position: relative;
+        background: #345578;
+        height: 400px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 400px;
+        }
+        .text-control{
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            padding: 40px 20%;
+            h2{
+                color: #ffffff;
+                font-size: 2em;
+                text-align: center;
+                padding: 0 20px;
+            }
+            p{
+                color: #ffffff;
+                padding: 5px 20px;
+                font-size: 1.2em;
+            }
+        }
+        // background-image: image('assets/images/accounting.jpg');
+        // background-size: cover;
+    }
+
+    // Call Back Form Section
+    .call-back-form{
+        width: 100%;
+        // height: 300px;
+        background-color: #345578;
+        text-align: center;
+        padding: 80px 0px;
+        h1{
+            color: #ffffff;
+            font-size: 2.4em;
+        }
+        p{
+            color: #ffffff;
+            font-size: 1.4em;
+        }
+        .form{
+            position: relative;
+            width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            .form-field{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                input{
+                    flex: 1;
+                    height: 40px;
+                    font-size: 1.2em;
+                    border: 1px solid #FF9900;
+                    width: 100%;
+                    padding-left: 5px;
+                }
+                input:nth-child(1){
+                    // margin-right: 5px;
+                }
+            }
+            button{
+                width: 100%;
+                background-color: #BC204B;
+                font-size: 1.2em;
+                color: #ffffff;
+                height: 40px;
+            }
+        }
+    }
+    // Why Customer Prefer Us
+    .why-us{
+        height: 300px;
+        background-color: #BC204B;
+        padding-top: 40px;
+        .why-us-wrapper{
+            position: relative;
+            width: 80%;
+            height: 300px;
+            background-color: #BC204B;
+            z-index: 1;
+            margin: 0 auto;
+            
+            h1{
+                color: #ffffff;
+                font-size: 2em;
+                padding: 20px 5px 5px 20px;
+            }
+            img{
+                position: absolute;
+                // top: 10%;
+                right: 0;
+                bottom: 0;
+                width: 300px;z-index: -1;
+                opacity: .5;
+            }
+            .reason{
+                padding-left: 40px;
+                span{
+                    display: flex;
+                    i{
+                        margin-right: 10px;
+                        color: #ffffff;
+                        font-size: 1.5em;
+                    }
+                    p{
+                        color: #ffffff;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

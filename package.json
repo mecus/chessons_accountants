@@ -1,0 +1,24 @@
+{
+  "name": "chessons",
+  "version": "1.0.0",
+  "description": "Accounting website",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Austin Oseh",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-typescript": "^4.0.2",
+    "run-sequence": "^2.2.1",
+    "typescript": "^2.8.3"
+  }
+}

@@ -1,0 +1,176 @@
+// Testimony Section
+.testimony{
+    width: 100%;
+    height: 300px;
+    background-color: #1D3557;
+    text-align: center;
+    h1{
+        color: #ffffff;
+        font-size: 1.5em;
+        padding-top: 20px;
+    }
+    .testimony-loop-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10px;
+        span > i{
+            color: #BC204B;
+            font-size: 4em;
+        }
+        span > i[attr=angle]{
+            padding-top: 50px;
+            opacity: .5;
+            font-size: 3em;
+        }
+        span.testimony-field{
+            display: flex;
+            flex-direction: column;
+            small, h2, p {
+                padding: 0;
+                margin: 0;
+            }
+            i[attr=user]{
+                color: #345578;
+            }
+            small{
+                color: lightgrey;
+                padding: 5px;
+                font-size: 1em;
+            }
+            h2{
+                color: #FF9900;
+                font-size: 1.2em;
+            }
+            p{
+                color: #FECB9C;
+                font-size: .9em;
+                opacity: .5;
+            }
+        }
+    }
+}
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    // Testimony Section
+    .testimony{
+        width: 100%;
+        height: 400px;
+        background-color: #1D3557;
+        text-align: center;
+        h1{
+            color: #ffffff;
+            font-size: 2em;
+            padding-top: 20px;
+        }
+        .testimony-loop-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 10px;
+            span > i{
+                color: #BC204B;
+                font-size: 7em;
+            }
+            span > i[attr=angle]{
+                padding-top: 80px;
+                opacity: .5;
+                font-size: 5em;
+            }
+            span.testimony-field{
+                display: flex;
+                flex-direction: column;
+                small, h2, p {
+                    padding: 0;
+                    margin: 0;
+                }
+                i[attr=user]{
+                    color: #345578;
+                }
+                small{
+                    color: lightgrey;
+                    padding: 5px;
+                    font-size: 1.5em;
+                }
+                h2{
+                    color: #FF9900;
+                    font-size: 1.8em;
+                }
+                p{
+                    color: #FECB9C;
+                    font-size: 1.2em;
+                    opacity: .5;
+                }
+            }
+        }
+    }
+
+}
+/* Portrait and Landscape */
+@media only screen 
+    and (min-device-width: 1200px) 
+    and (max-device-width: 1600px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+    // Testimony Section
+    .testimony{
+        background-color: #1D3557;
+        height: 400px;
+        padding-top: 40px;
+        .testimony-wrapper{
+            position: relative;
+            width: 80%;
+            height: 400px;
+            background-color: #1D3557;
+            text-align: center;
+            margin: 0 auto;
+            h1{
+                color: #ffffff;
+                font-size: 2em;
+                padding-top: 20px;
+            }
+            .testimony-loop-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 10px;
+                span > i{
+                    color: #BC204B;
+                    font-size: 7em;
+                }
+                span > i[attr=angle]{
+                    padding-top: 80px;
+                    opacity: .5;
+                    font-size: 5em;
+                }
+                span.testimony-field{
+                    display: flex;
+                    flex-direction: column;
+                    small, h2, p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                    i[attr=user]{
+                        color: #345578;
+                    }
+                    small{
+                        color: lightgrey;
+                        padding: 5px;
+                        font-size: 1.2em;
+                    }
+                    h2{
+                        color: #FF9900;
+                        font-size: 1.8em;
+                    }
+                    p{
+                        color: #FECB9C;
+                        font-size: 1.2em;
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+}

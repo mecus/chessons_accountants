@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" href="./main.css">
+        <title>About us</title>
+    </head>
+<body>
+    <!-- Rendered Navigation from js -->
+    <div class="otherPageNav" id="navigation"></div>
+    <div id="page-header" class="page-header menu-margin">
+        <h1>Who we are</h1>
+        <p>We Offer Wide Range of Services</p>
+        <p attr="see-serv"><a href="./services.html">See our services here</a></p>
+        <a onclick="requestRouting('./consultation.html')">Request free consultation</a>
+    </div>
+    <!-- This is the main content area -->
+<div class="min-menu menu-margin">
+    <span id="menu1" onclick="aboutUs('about')">About Us</span>
+    <span id="menu2" onclick="aboutUs('team')">Meet Our Team</span>
+    </div>
+    <div id="about" class="about-content">
+        <h1>About us</h1>
+    <p>
+        <strong>Chessons</strong> was established in 1992 as an Accountancy practice and has witnessed steady and
+        progressive growth over the years. We have 20 years of experience and expertise in helping
+        a wide variety of clients from a broad range of sectors to meet their immediate, short and
+        long term objectives.
+    </p>
+    <p>
+        At Chessons, we believe in offering personalised and flexible services. Irrespective of size
+        and nature of your business, we believe that as your Accountant, we should be a vital and
+        active part of your team, ensuring that you succeed. We are here to guide and support you
+        in maximising your business potentials, ensure early and speedy compliance with the Tax
+        Office and Companies House requirements.
+    </p>
+    <p>
+        Every client, regardless of size, can count on the personal involvement of a lead client
+        service partner/associate. This strong partner/associate involvement is central to our
+        service philosophy and delivery. Our strategy is to provide tailor made financial solutions by
+        understanding our clients’ business needs and by building a lasting professional relationship
+        that allows us to grow and develop as you, our clients also grow and develop.
+    </p>
+    <p>
+        We work diligently with our clients to identify high risk areas and develop constructive and
+        practical ways to deal with them. We communicate regularly and provide information in a
+        form our clients can use to make effective and profitable business decisions.
+    </p>
+    <p>
+        Our clients come from a diverse range of backgrounds. We provide the needs of small to
+        medium size organisations; sole traders, partnerships, charities, associations, limited liability
+        companies, start ups. We recognise that each of our clients is unique and valued and
+        therefore treat according to their needs.
+    </p>
+    <p>
+        We always give a quote for each job and reach an agreement before we start. As we are
+        very competitive, we enjoy high clients’ retention and satisfaction. Our clients have the
+        option of a monthly direct debit payments or a deposit on commencement of the job and
+        the balance on completion and approval by the client. <a onclick="requestRouting('./consultation.html')">Request free consultation</a>
+    </p>
+
+   
+    </div>
+
+    <div id="team" class="team-content">
+    <h1>Meet Our Team</h1>
+    <div class="teams">
+        <span>
+            <!-- <i class="fas fa-user-circle"></i> -->
+            <img src="./assets/images/oku.jpg" alt="">
+            <h1 attr="name">Andrew Nwabueze </h1>
+            <h2>( ACCA, MBA, AMABE )</h2>
+            <h3>Principal / Director</h3>
+            <a onclick="readMore('andy')">more profile</a>
+            <p id="readMoreAndy">
+                <i onclick="closeWindow('andy')" class="material-icons">close</i>
+                Andrew is a Chartered Certified Accountant who has over 7 years in all manners of accounting
+                and financing roles including Internal Auditing, Banking, Micro Finance, Taxation and he has
+                vast array of experiences in general businesses.
+                <strong class="">
+                        Andrew use his expertise to help a variety of our clients with all aspects of business financial
+                        management by providing tailored services to businesses and establish their internal financial
+                        reporting procedures, to accurately run a profitable business.
+                </strong>
+            </p>
+        </span>
+        <span>
+            <!-- <i class="fas fa-user-circle"></i> -->
+            <img src="./assets/images/guy-rolliston.jpg" alt="">
+            <h1 attr="name">Chidi Ughaonu</h1>
+            <h2>( ACCA )</h2>
+            <h3>Associate</h3>
+            <a onclick="readMore('chidi')">more profile</a>
+            <p id="readMoreChidi">
+                <i onclick="closeWindow('chidi')" class="material-icons">close</i>
+                option of a monthly direct debit payments or a deposit on commencement of the job and
+                the balance on completion and approval by the client.
+            </p>
+        </span>
+        <span>
+            <!-- <i class="fas fa-user-circle"></i> -->
+            <img src="./assets/images/kevin_deppernewb.jpg" alt="">
+            <h1 attr="name">Lisa Li</h1>
+            <h2>( ACCA )</h2>
+            <h3>Associate</h3>
+            <a onclick="readMore('lisa')">more profile</a>
+            <p id="readMoreLisa">
+                <i onclick="closeWindow('lisa')" class="material-icons">close</i>
+                option of a monthly direct debit payments or a deposit on commencement of the job and
+                the balance on completion and approval by the client.
+            </p>
+        </span>
+        <span>
+            <i class="fas fa-user-circle"></i>
+            <h1 attr="name">K.K. Chai</h1>
+            <h2>( FCCA )</h2>
+            <h3>Associate</h3>
+        </span>
+        <span>
+            <i class="fas fa-user-circle"></i>
+            <h1 attr="name">Russell J. Brown</h1>
+            <h2>( ACMA )</h2>
+            <h3>Associate</h3>
+        </span>
+        
+    </div>
+</div>
+<div class="accredit">
+    <img src="../assets/images/ACCARED.png" alt="">
+    <span>
+        <p>Registered in England and Wales as Chessons Accountants Ltd Reg Number- 11151698</p>
+    </span>
+</div>
+<div id="textimony"></div>
+<div id="footer"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mob-menu" class="mobile-menu">
+        <!-- <i onclick="closeMenu()" attr="close-ic" class="fas fa-times"></i> -->
+        <i class="material-icons" attr="close-ic" onclick="closeMenu()">close</i>
+        <div class="menu-items">
+            <a href="./index.html#home" onclick="closeMenu()" >Home</a>
+            <a href="./about.html" onclick="closeMenu()">About</a>
+            <a href="./services.html" (click)="closeMenu()">Services</a>
+            <a href="./consultation.html">Fee Consultation</a>
+            <a href="./contact.html" onclick="closeMenu()">Contact</a>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>

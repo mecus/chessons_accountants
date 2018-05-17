@@ -1,0 +1,161 @@
+
+.service-container{
+    padding: 10px 0px;
+    width: 100%;
+    h1{
+        font-size: 1.5em;
+        padding: 5px 20px; 
+        font-weight: bold; 
+    }
+    .services{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        padding: 0px 20px;
+        .service{
+            // height: 200px;
+            // width: 300px;
+            // background-color: red;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            border-bottom: 1px solid lightgray;
+            h1{
+                font-size: 1em;
+                padding: 5px 20px;
+            }
+            span{
+                padding-bottom: 10px;
+                overflow: hidden;
+                #service-details1, #service-details2, #service-details3,
+                #service-details4, #service-details5, #service-details6,
+                #service-details7, #service-details8, #service-details9,
+                #service-details10, #service-details11
+                {
+                    font-size: 0em;
+                    margin: 0;
+                    padding: 0;
+                    // display: none;
+                }
+                #service-details1{
+                   font-size: 0.8em;
+                }
+            }
+        }
+        .service:nth-child(11){
+            border-bottom: none;
+        }
+    }
+   
+}
+
+/* Tablet Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .service-container{
+        // width: 100%;
+        
+        h1{
+            font-size: 2em;
+            padding: 5px 20px; 
+            font-weight: bold; 
+            text-align: center;
+        }
+        .services{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            padding: 0px 2%;
+            .service{
+                height: 200px;
+                // width: 300px;
+                // background-color: #BC204B;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                border-bottom: 1px solid lightgray;
+                h1{
+                    padding: 5px 20px;
+                    color: #1D3557;
+                    font-size: 1.5em;
+                }
+                span{
+                    padding-bottom: 10px;
+                    overflow: hidden;
+                    #service-details1, #service-details2, #service-details3,
+                    #service-details4, #service-details5, #service-details6,
+                    #service-details7, #service-details8, #service-details9,
+                    #service-details10, #service-details11
+                    {
+                        font-size: 0.9em;
+                        margin: 0;
+                        padding: 0;
+                        // display: none;
+                        // color: #ffffff;
+                    }
+                    
+                }
+            }
+            .service:nth-child(11){
+                border-bottom: none;
+            }
+        }
+       
+    }
+  }
+
+  /* Desktop Portrait and Landscape */
+  @media only screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .service-container{
+        // width: 100%;
+        
+        h1{
+            font-size: 1.5em;
+            padding: 5px 20px; 
+            font-weight: bold; 
+            text-align: center;
+        }
+        .services{
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 0px 10%;
+            .service{
+                height: 200px;
+                // width: 300px;
+                // background-color: #BC204B;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                border-bottom: 1px solid lightgray;
+                h1{
+                    font-size: 1em;
+                    padding: 5px 20px;
+                    color: #1D3557;
+
+                }
+                span{
+                    padding-bottom: 10px;
+                    overflow: hidden;
+                    #service-details1, #service-details2, #service-details3,
+                    #service-details4, #service-details5, #service-details6,
+                    #service-details7, #service-details8, #service-details9,
+                    #service-details10, #service-details11
+                    {
+                        font-size: 0.8em;
+                        margin: 0;
+                        padding: 0;
+                        // display: none;
+                    }
+                }
+            }
+            .service:nth-child(11), .service:nth-child(10){
+                border-bottom: none;
+            }
+        }
+       
+    }
+  }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <title>Free Consultation</title>
+</head>
+<body>
+    <!-- Rendered Navigation from js -->
+    <div class="otherPageNav" id="navigation"></div>
+    <div class="page-header menu-margin">
+        <h1>Free Consultaion</h1>
+        <p>We Offer Free Initial Consultaion</p>
+        <p><a href="./services.html">See our services</a></p>
+        <!-- <button>Request free consultation</button> -->
+    </div>
+    <div class="consultation-container">
+        <div class="consultation">
+            <h1>Free No Obligation Consultation</h1>
+            <h2>Here's the deal...</h2>
+            <ol>
+                <li>You can receive a FREE Initial Consultation. We will offer as much advice as we can.</li>
+                <li>You'll receive a competitive fixed quote normally provided at the meeting for your consideration</li>
+                <li>We can either come to you to help us get a better understanding of your situation at first hand or if you prefer to visit us to see our set up, that's fine. You choose.</li>
+                <li>The meeting is completely without obligation</li>
+            </ol>
+            <p>If you already have an accountant, the changeover is very simple and we take care of it all for you.</p>
+            <p>Please either contact us directly or complete and submit the form below.</p>
+        </div>
+        <div class="consultation-form">
+            <h1>Free Consultation Form</h1>
+            <form id="cForm" name="cForm">
+                <div class="consult-form-group">
+                    <label for="cName">Name</label>
+                    <input name="cName" id="cName" type="text" required placeholder="name">
+                </div>
+                <div class="consult-form-group">
+                    <label for="cCompany">Company</label>
+                    <input id="cCompany" type="text" placeholder="company">
+                </div>
+                <div class="consult-form-group">
+                    <label for="cEmail">Email</label>
+                    <input id="cEmail" type="email" placeholder="email">
+                </div>
+                <div class="consult-form-group">
+                    <label for="cTel">Telephone</label>
+                    <input id="cTel" type="text" placeholder="telephone">
+                </div>
+                <div class="consult-form-group">
+                    <label for="cMessage">Message</label>
+                    <textarea id="cMessage" type="text" cols="30" rows="5" placeholder="message"></textarea>
+                </div>
+                <div class="consult-form-group">
+                    <a id="cButton" type="button">Submit</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="textimony"></div>
+    <div id="footer"></div>
+    <!-- Mobile Menu -->
+    <div id="mob-menu" class="mobile-menu">
+        <!-- <i onclick="closeMenu()" attr="close-ic" class="fas fa-times"></i> -->
+        <i class="material-icons" attr="close-ic" onclick="closeMenu()">close</i>
+        <div class="menu-items">
+            <a href="./index.html#home" onclick="closeMenu()" >Home</a>
+            <a href="./about.html" onclick="closeMenu()">About</a>
+            <a href="./services.html" (click)="closeMenu()">Services</a>
+            <a href="./consultation.html">Fee Consultation</a>
+            <a href="./contact.html" onclick="closeMenu()">Contact</a>
+        </div>
+    </div>
+    <!-- User data submit respond -->
+    <div id="respond" class="respond"></div>
+    <script src="./main.js"></script>
+</body>
+</html>
