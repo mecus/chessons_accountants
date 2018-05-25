@@ -14,7 +14,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 0 10px;
-        span > i{
+        i{
             color: #BC204B;
             font-size: 4em;
         }
@@ -24,28 +24,38 @@
             font-size: 3em;
         }
         span.testimony-field{
-            display: flex;
-            flex-direction: column;
-            small, h2, p {
-                padding: 0;
-                margin: 0;
-            }
-            i[attr=user]{
-                color: #345578;
-            }
-            small{
-                color: lightgrey;
-                padding: 5px;
-                font-size: 1em;
-            }
-            h2{
-                color: #FF9900;
-                font-size: 1.2em;
-            }
-            p{
-                color: #FECB9C;
-                font-size: .9em;
-                opacity: .5;
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            .testifier{
+                position: absolute;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                // overflow: hidden;
+                small, h2, p {
+                    padding: 0;
+                    margin: 0;
+                }
+                i[attr=user]{
+                    color: #345578;
+                }
+                small{
+                    color: lightgrey;
+                    padding: 5px;
+                    font-size: 1em;
+                }
+                h2{
+                    color: #FF9900;
+                    font-size: 1.2em;
+                }
+                p{
+                    color: #FECB9C;
+                    font-size: .9em;
+                    opacity: .5;
+                }
             }
         }
     }
@@ -54,7 +64,8 @@
 @media only screen 
   and (min-device-width: 768px)
   and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+//   and (-webkit-min-device-pixel-ratio: 1) 
+  {
     // Testimony Section
     .testimony{
         width: 100%;
@@ -80,31 +91,33 @@
                 opacity: .5;
                 font-size: 5em;
             }
-            span.testimony-field{
-                display: flex;
-                flex-direction: column;
-                small, h2, p {
-                    padding: 0;
-                    margin: 0;
-                }
-                i[attr=user]{
-                    color: #345578;
-                }
-                small{
-                    color: lightgrey;
-                    padding: 5px;
-                    font-size: 1.5em;
-                }
-                h2{
-                    color: #FF9900;
-                    font-size: 1.8em;
-                }
-                p{
-                    color: #FECB9C;
-                    font-size: 1.2em;
-                    opacity: .5;
-                }
-            }
+            // span.testimony-field{
+            //     .testifier{
+            //         display: flex;
+            //         flex-direction: column;
+            //         small, h2, p {
+            //             padding: 0;
+            //             margin: 0;
+            //         }
+            //         i[attr=user]{
+            //             color: #345578;
+            //         }
+            //         small{
+            //             color: lightgrey;
+            //             padding: 5px;
+            //             font-size: 1.5em;
+            //         }
+            //         h2{
+            //             color: #FF9900;
+            //             font-size: 1.8em;
+            //         }
+            //         p{
+            //             color: #FECB9C;
+            //             font-size: 1.2em;
+            //             opacity: .5;
+            //         }
+            //     }
+            // }
         }
     }
 
@@ -113,7 +126,8 @@
 @media only screen 
     and (min-device-width: 1200px) 
     and (max-device-width: 1600px) 
-    and (-webkit-min-device-pixel-ratio: 1) {
+    // and (-webkit-min-device-pixel-ratio: 1) 
+    {
     // Testimony Section
     .testimony{
         background-color: #1D3557;
@@ -145,31 +159,33 @@
                     opacity: .5;
                     font-size: 5em;
                 }
-                span.testimony-field{
-                    display: flex;
-                    flex-direction: column;
-                    small, h2, p {
-                        padding: 0;
-                        margin: 0;
-                    }
-                    i[attr=user]{
-                        color: #345578;
-                    }
-                    small{
-                        color: lightgrey;
-                        padding: 5px;
-                        font-size: 1.2em;
-                    }
-                    h2{
-                        color: #FF9900;
-                        font-size: 1.8em;
-                    }
-                    p{
-                        color: #FECB9C;
-                        font-size: 1.2em;
-                        opacity: .5;
-                    }
-                }
+                // span.testimony-field{
+                //     .testifier{
+                //         display: flex;
+                //         flex-direction: column;
+                //         small, h2, p {
+                //             padding: 0;
+                //             margin: 0;
+                //         }
+                //         i[attr=user]{
+                //             color: #345578;
+                //         }
+                //         small{
+                //             color: lightgrey;
+                //             padding: 5px;
+                //             font-size: 1.2em;
+                //         }
+                //         h2{
+                //             color: #FF9900;
+                //             font-size: 1.8em;
+                //         }
+                //         p{
+                //             color: #FECB9C;
+                //             font-size: 1.2em;
+                //             opacity: .5;
+                //         }
+                //     }
+                // }
             }
         }
     }

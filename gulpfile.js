@@ -6,14 +6,16 @@ let sourcemaps = require("gulp-sourcemaps");
 let babel = require("gulp-babel");
 let sequence = require('run-sequence');
 let ts = require('gulp-typescript');
+let plumber = require('gulp-plumber');
 
 gulp.task("transpileJs", function () {
     return gulp.src("src/scripts/*.js")
-      .pipe(sourcemaps.init())
-      .pipe(babel())
-      .pipe(concat("main.js"))
-      .pipe(sourcemaps.write("."))
-      .pipe(gulp.dest("dist"));
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(babel())
+        .pipe(concat("main.js"))
+        .pipe(sourcemaps.write("."))
+        .pipe(gulp.dest("dist"));
   });
 
 
@@ -47,9 +49,13 @@ gulp.task('copy:images', function(){
         ]
     ).pipe(gulp.dest("dist/assets/images"))
 });
+gulp.task('copy:pwa-code', function(){
+    return gulp.src(["src/pwa/*.js", "src/pwa/*.json"])
+        .pipe(gulp.dest("dist"))
+});
 gulp.task('default', 
     [
-        'copy:pages', 'copy:images', 
+        'copy:pages', 'copy:images', 'copy:pwa-code',
         'sass', 'sass:watch', 'html:watch', 
         'transpileJs', 'js:watch'
     ]

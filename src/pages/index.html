@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css" >
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script> -->
     <title>Welcome to Chessons</title>
 </head>
@@ -19,7 +20,7 @@
         <div class="app-header">
             <div class="filter-layer"></div>
             <div class="head-title">
-                <h1>Chartered Certified Accountants / Business Consultants</h1>
+                <h1 id="welTitle">Chartered Certified Accountants / Business Consultants</h1>
                 <p>Supporting your Business</p>
                 <p>by Adding Value.</p>
                 <button onclick="requestRouting('./consultation.html')">Request Free Consultation</button>
@@ -98,7 +99,7 @@
                 
         <!-- Your choices -->
         <div class="choices">
-            <img src="assets/images/accounting.jpg" alt="">
+            <img id="lodImage" src="assets/images/accounting.jpg" alt="">
             <div class="text-control">
                 <h2>We let you decide when and how we work for you</h2>
                 <p>
@@ -161,16 +162,23 @@
     <div id="mob-menu" class="mobile-menu">
         <!-- <i onclick="closeMenu()" attr="close-ic" class="fas fa-times"></i> -->
         <i class="material-icons" attr="close-ic" onclick="closeMenu()">close</i>
+        <div class="shap1">
+            <h1 id="shapBrand">Chessons</h1>
+            <p>Accountants</p>
+        </div>
+        <div class="shap2"></div>
         <div class="menu-items">
-            <a href="" onclick="closeMenu()">Home</a>
-            <a href="./about.html#About" onclick="closeMenu()">About</a>
-            <a href="./services.html" onclick="closeMenu()">Services</a>
-            <a href="./consultation.html">Fee Consultation</a>
-            <a href="./contact.html" onclick="closeMenu()">Contact</a>
+            <a class="men-it" href="" onclick="closeMenu()">Home <i class="material-icons">done</i> </a>
+            <a class="men-it" href="./about.html" onclick="closeMenu()">About <i class="material-icons">done</i> </a>
+            <a class="men-it" href="./services.html" onclick="closeMenu()">Services <i class="material-icons">done</i> </a>
+            <a class="men-it" href="./consultation.html" onclick="closeMenu()">Fee Consultation <i class="material-icons">done</i> </a>
+            <a class="men-it" href="./contact.html" onclick="closeMenu()">Contact <i class="material-icons">done</i></a>
         </div>
     </div>
+    <!-- <noscript>This site does not support javascript.. please enable it.</noscript> -->
     <!-- User data submit respond -->
     <div id="respond" class="respond"></div>
+    <!-- <script src="app.js"></script> -->
     <script async src="main.js"></script>
 </body>
 </html>

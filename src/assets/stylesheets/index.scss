@@ -22,6 +22,9 @@
             font-size: 1.5em; 
             padding: 0 50px;
             opacity: 0.9;
+            transition: 0.2s;
+            -webkit-transition: 0.2s;
+            transform: scale(0);
         }
         p{
             color: #FF9900;
@@ -286,7 +289,8 @@
 @media only screen 
   and (min-device-width: 768px)
   and (max-device-width: 1024px)
-  and (-webkit-min-device-pixel-ratio: 1) {
+//   and (-webkit-min-device-pixel-ratio: 1) 
+  {
     .app-header{
         position: relative;
         height: 500px; // alter
@@ -311,6 +315,7 @@
                 font-size: 2.5em; // alter
                 padding: 0 50px;
                 opacity: 0.9;
+                transform: scale(0);
             }
             p{
                 // color: #ffffff;
@@ -581,7 +586,8 @@
 @media only screen 
     and (min-device-width: 1200px) 
     and (max-device-width: 1600px) 
-    and (-webkit-min-device-pixel-ratio: 1) {
+    // and (-webkit-min-device-pixel-ratio: 1) 
+    {
 
     .app-header{
         position: relative;
@@ -608,6 +614,7 @@
                 font-size: 2.5em; // alter
                 padding: 0 50px;
                 opacity: 0.9;
+                transform: scale(0);
             }
             p{
                 // color: #ffffff;

@@ -1,4 +1,39 @@
-function RenderNavigation(){
+window.addEventListener('load', function(e){
+  let about = document.getElementById('nabout');
+  let service = document.getElementById('nservice');
+  let contact = document.getElementById('ncontact');
+  let color = "#d02956";
+  let textC = "#1D3557";
+  switch(e.target.location.pathname){
+    case "/about.html":
+      about.style.backgroundColor = color;
+      about.style.color = textC;
+      about.style.transition = "1s";
+      break;
+    case "/services.html":
+      service.style.backgroundColor = color;
+      service.style.color = textC;
+      service.style.transition = "1s";
+      break;
+    case "/contact.html":
+      contact.style.backgroundColor = color;
+      contact.style.color = textC;
+      contact.style.transition = "1s";
+      break;
+  }
+  // Other Animation here
+  let tit = document.getElementById('welTitle');
+  if(tit){
+    setTimeout(function(){
+      tit.style.transform = "scale(1)";
+      tit.style.transition = "0.2s";
+      tit.style.webkitTransition = "0.2s";
+      tit.style.transitionTimingFunction = "cubic-bezier(0.42,0,0.58,1)";
+    }, 200);
+  }
+});
+
+(function RenderNavigation(){
   let nav = document.getElementById('navigation');
   if(nav){
     nav.innerHTML = `
@@ -8,9 +43,9 @@ function RenderNavigation(){
                 <a attr="brand" href="./index.html">Chessons</a>
                 </span>
                 <span class="desktop-menu">
-                    <a href="./about.html">About Us</a>
-                    <a href="./services.html">Services</a>
-                    <a href="./contact.html">Contact</a>
+                    <a id="nabout" href="./about.html">About Us</a>
+                    <a id="nservice" href="./services.html">Services</a>
+                    <a id="ncontact" href="./contact.html">Contact</a>
                 </span>
                 <span class="mob-menu">
                 <i onclick="openMenu()" class="fas fa-bars"></i>
@@ -19,16 +54,41 @@ function RenderNavigation(){
     </div>
     `
   }
-}
-RenderNavigation();
-
+})();
+var setInterV;
 function closeMenu(){
     var menu = document.getElementById('mob-menu');
+    var mi2 = document.getElementsByClassName('men-it');
+    for(var i = 0; i < mi2.length; i++){
+      mi2[i].style.marginRight = "-380px";
+    }
+    let sbrand = document.getElementById('shapBrand');
+    sbrand.style.transform = "scale(0)";
+    clearInterval(setInterV);
     menu.style.display = "none";
   }
 function openMenu(){
+  console.log(window.navigator.vendor);
     var menu = document.getElementById('mob-menu');
-    menu.style.display = "block"; 
+    var mi = document.getElementsByClassName('men-it');
+    menu.style.display = "block";
+    var n = 0;
+    setInterV = setInterval(showM, 150);
+    function showM(){
+      if(n < mi.length){
+        mi[n].style.marginRight = "0px";
+        // mi[n].style.transition = "0.3s";
+        mi[n].style.transitionTimingFunction = "ease-in-out";
+        n += 1;
+      }
+      
+    }
+   setTimeout(function(){
+    let sbrand = document.getElementById('shapBrand');
+    sbrand.style.transform = "scale(1)";
+    sbrand.style.transition = "0.5s";
+   }, 500);
+
 }
 
 function aboutUs(sel){
@@ -70,6 +130,16 @@ function readMore(name){
       lisa.style.transform = "scale(1)";
       lisa.style.transition = ".2s";
       break
+    case "chai":
+      let chai = document.getElementById("readMoreChai");
+      chai.style.transform = "scale(1)";
+      chai.style.transition = ".2s";
+      break
+    case "brown":
+      let brown = document.getElementById("readMoreBrown");
+      brown.style.transform = "scale(1)";
+      brown.style.transition = ".2s";
+      break
   }
 }
 function closeWindow(name){
@@ -89,10 +159,20 @@ function closeWindow(name){
       lisa.style.transform = "scale(0)";
       lisa.style.transition = ".2s";
       break
+    case "chai":
+      let chai = document.getElementById("readMoreChai");
+      chai.style.transform = "scale(0)";
+      chai.style.transition = ".2s";
+      break
+    case "brown":
+      let brown = document.getElementById("readMoreBrown");
+      brown.style.transform = "scale(0)";
+      brown.style.transition = ".2s";
+      break
   }
 
 }
-function RenderFooter(){
+(function RenderFooter(){
   let foot = document.getElementById('footer');
   if (foot) {
   foot.innerHTML = `
@@ -144,8 +224,8 @@ function RenderFooter(){
 
   `
   }
-}
-function RenderTestimony(){
+})();
+(function RenderTestimony(){
   let testimony = document.getElementById('textimony');
   if (testimony) {
   testimony.innerHTML = `
@@ -154,20 +234,40 @@ function RenderTestimony(){
       <h1>Testimony</h1>
       <div class="testimony-loop-container">
         <span>
-            <i attr="angle" class="material-icons">keyboard_arrow_left</i>
+            <i onclick="controlLoop(-1)" attr="angle" class="material-icons">keyboard_arrow_left</i>
             <!-- <i attr="angle" class="fas fa-angle-left"></i> -->
         </span>
         <span class="testimony-field">
+          <div class="testifier">
+            <i attr="user" class="fas fa-user-circle"></i>
+            <small>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              ipsum, dolor sit amet consectetur adipisicing elit. ipsum, dolor sit amet consectetur adipisicing elit.
+            </small>
+            <h2>John Tudy</h2>
+            <p>Manager CluodFond</p>
+          </div>
+          <div class="testifier">
           <i attr="user" class="fas fa-user-circle"></i>
           <small>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             ipsum, dolor sit amet consectetur adipisicing elit. ipsum, dolor sit amet consectetur adipisicing elit.
           </small>
-          <h2>John Tudy</h2>
-          <p>Manager CluodFond</p>
+          <h2>Tony Adams</h2>
+          <p>Manager Network Interface</p>
+        </div>
+        <div class="testifier">
+          <i attr="user" class="fas fa-user-circle"></i>
+          <small>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            ipsum, dolor sit amet consectetur adipisicing elit. ipsum, dolor sit amet consectetur adipisicing elit.
+          </small>
+          <h2>Joseph Alan</h2>
+          <p>Manager Tractor Monster</p>
+        </div>
         </span>
         <span>
-            <i attr="angle" class="material-icons">keyboard_arrow_right</i>
+            <i onclick="controlLoop(1)" attr="angle" class="material-icons">keyboard_arrow_right</i>
             <!-- <i attr="angle" class="fas fa-angle-right"></i> -->
         </span>
       </div>
@@ -176,9 +276,25 @@ function RenderTestimony(){
   
   `
   }
+})();
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function controlLoop(n) {
+  showDivs(slideIndex += n);
 }
-RenderTestimony();
-RenderFooter();
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("testifier");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";
+  x[slideIndex-1].style.display = "flex";
+}
 
 let togg1, togg2, togg3, togg4, togg5, togg6,
 togg7, togg8, togg9, togg10, togg11 = false;
@@ -332,7 +448,7 @@ function getServiceDetails(task) {
  }
 
 
-function checkInput(){
+(function checkInput(){
   let validation = false;
   let eForm = document.getElementById('cForm');
   let cemail = document.getElementById('cEmail');
@@ -421,10 +537,9 @@ function checkInput(){
      
    });
  }
-}
-checkInput();
+})();
 
-function callBackFormSubmit(){
+(function callBackFormSubmit(){
   let callBack = document.getElementById('callBack');
   if(!callBack){
     return null;
@@ -438,14 +553,14 @@ function callBackFormSubmit(){
       phone: ccallPhone.value
     }
     console.log(data);
+    // Refactor later
     ccallName.value = " ";
     ccallPhone.value = " ";
     createCallBack(data);
   });
-}
-callBackFormSubmit();
+})();
 
-function contactSubmitForm(){
+(function contactSubmitForm(){
   const contactButton = document.getElementById('contactButton');
   if(!contactButton){
     return null;
@@ -468,7 +583,15 @@ function contactSubmitForm(){
     console.log(data);
     createContact(data);
   });
-}
-contactSubmitForm();
+})();
 
-
+// let img = document.querySelector('#lodImage');
+// img.addEventListener('load', function(e){
+//   console.log("Image loaded", e);
+// });
+// img.addEventListener('loadstart', function(e){
+//   console.log("Image start loading");
+// });
+// img.addEventListener('loadend', function(e){
+//   console.log("Image finish loading");
+// });
