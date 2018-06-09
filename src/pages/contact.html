@@ -34,15 +34,15 @@
                 <p attr="instruct">Simply use the direct number above to get in touch or fill the form below</p>
                 <div class="input-group">
                     <label for="nameCon">Name</label>
-                    <input id="nameCon" type="text" placeholder="Name">
+                    <input id="nameCon" type="text" maxlength="30" placeholder="Name">
                 </div>
                 <div class="input-group">
                     <label for="emailCon">Email</label>
-                    <input id="emailCon" type="email" placeholder="email">
+                    <input id="emailCon" type="email" maxlength="30" placeholder="email">
                 </div>
                 <div class="input-group">
                     <label for="messageCon">Message</label>
-                    <textarea id="messageCon" name="" placeholder="message"  cols="30" rows="5"></textarea>
+                    <textarea id="messageCon" name="" maxlength="225" placeholder="message"  cols="30" rows="5"></textarea>
                 </div>
                 <div class="input-group">
                     <a id="contactButton" >Send</a>
@@ -77,6 +77,11 @@
     </div>
     <!-- User data submit respond -->
     <div id="respond" class="respond"></div>
+    <div id="progress" class="progress">
+        <div class="indicator">
+            <div class="spin"></div>
+        </div>
+    </div>
     <!-- <script src="app.js"></script> -->
     <script async src="main.js"></script>
 </body>

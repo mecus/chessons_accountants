@@ -28,7 +28,7 @@
         </div>
         <!-- Services Section -->
         <div class="services-section">
-            <h1 attr="service-head">Things We Do</h1>
+            <h1 id="service-headH1" attr="service-head">Things We Do</h1>
             <div class="service-wrapper">
                 <div class="service">
                     <i class="fas fa-book"></i>
@@ -54,18 +54,18 @@
         </div>
         <!-- Center Image Display -->
         <div class="center-image">
-            <div class="display-image-left">
+            <div class="dImage display-image-left">
                 <img class="small" src="assets/images/biz-small.jpeg" alt="">
                 <img class="medium" src="assets/images/biz-medium.jpeg" alt="">
             </div>
-            <div class="display-image-right">
+            <div class="dImage display-image-right">
                 <img class="small" src="assets/images/biz-2-small.jpeg" alt="">
                 <img class="medium" src="assets/images/biz-2-medium.jpeg" alt="">
             </div>
         </div>
         <!-- Who we serve section -->
         <div class="audience">
-            <h1 attr="title">Who We Serve</h1>
+            <h1 id="audHead" attr="title">Who We Serve</h1>
             <div class="audience-wrapper">
                 <div class="player">
                 <span class="icon">
@@ -73,7 +73,7 @@
                 </span>
                 <span class="wording">
                     <h1>Sole-Trader / Self-Employed</h1>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quia culpa architecto magni officiis facilis? </small>
+                    <small>Simplicity and support at a low-cost fixed monthly fee </small>
                 </span>
                 </div>
                 <div class="player">
@@ -82,7 +82,7 @@
                     </span>
                     <span class="wording">
                     <h1>Limited Companies</h1>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quia culpa architecto magni officiis facilis? </small>
+                    <small>Expert advice from your own experienced, dedicated accountant </small>
                     </span>
                 </div>
                 <div class="player">
@@ -91,7 +91,7 @@
                     </span>
                     <span class="wording">
                     <h1>Partnership / Joint Business</h1>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quia culpa architecto magni officiis facilis? </small>
+                    <small>Comprehensive support for both you and your partners </small>
                     </span>
                 </div>
             </div>
@@ -100,7 +100,7 @@
         <!-- Your choices -->
         <div class="choices">
             <img id="lodImage" src="assets/images/accounting.jpg" alt="">
-            <div class="text-control">
+            <div id="text-ctrl" class="text-control">
                 <h2>We let you decide when and how we work for you</h2>
                 <p>
                 If your business is used to doing everything online, then great because so are we.
@@ -112,42 +112,45 @@
         </div>
         
         <!-- Call Back Section -->
-        <div class="call-back-form">
-            <h1>Let Us Call You</h1>
-            <p>Please enter your name and number, one of our expert will call you</p>
-            <div class="form">
-
-                <div class="form-field">
-                    <input id="ccallName" type="text" placeholder="Name">
-                    <input id="ccallPhone" type="telephone" placeholder="Phone Number">
+        <div class="callBack-Container">
+            <div class="call-back-form">
+                <h1>Let Us Call You</h1>
+                <p>Please enter your name and number, one of our expert will call you</p>
+                <div class="form">
+                    <small id="errMsg"></small>
+                    <div class="form-field">
+                        <input id="ccallName" type="text" maxlength="25" placeholder="Name">
+                        <input id="ccallPhone" type="telephone" maxlength="11" placeholder="Phone Number">
+                    </div>
+                    <a id="callBack" type="button">Call me back</a>
                 </div>
-                <a id="callBack" type="button">Call me back</a>
             </div>
         </div>
                 
         <!-- Why Customer Prefer Us -->
+        <!-- <button onclick="startProgress()" >Progress</button> -->
         <div class="why-us">
         <div class="why-us-wrapper">
-            <h1>Why Customer Prefered Us?</h1>
-            <img src="assets/images/accountant.png" alt="">
+            <h1 id="head-h1">Why Customer Prefered Us?</h1>
+            <img id="crop-image" src="assets/images/accountant.png" alt="">
             <div class="reason">
-                <span>
+                <span class="why-ch">
                     <i class="fas fa-check"></i>
                     <p>Fixed monthly fees</p>
                 </span>
-                <span>
+                <span class="why-ch">
                     <i class="fas fa-check"></i>
                     <p>Your own dedicated accountant</p>
                 </span>
-                <span>
+                <span class="why-ch">
                     <i class="fas fa-check"></i>
                     <p>Monthly payment by direct debit</p>
                 </span>
-                <span>
+                <span class="why-ch">
                     <i class="fas fa-check"></i>
                     <p>Unlimited help and advise</p>
                 </span>
-                <span>
+                <span class="why-ch">
                     <i class="fas fa-check"></i>
                     <p>Engage with us however suites your business</p>
                 </span>
@@ -155,8 +158,8 @@
         </div>
     </div>
     </div>
-    <div id="textimony"></div>
-    <div id="footer"></div>
+    <div class="texty" id="textimony"></div>
+    <div class="footy" id="footer"></div>
 
     <!-- Mobile Menu -->
     <div id="mob-menu" class="mobile-menu">
@@ -178,6 +181,11 @@
     <!-- <noscript>This site does not support javascript.. please enable it.</noscript> -->
     <!-- User data submit respond -->
     <div id="respond" class="respond"></div>
+    <div id="progress" class="progress">
+        <div class="indicator">
+            <div class="spin"></div>
+        </div>
+    </div>
     <!-- <script src="app.js"></script> -->
     <script async src="main.js"></script>
 </body>

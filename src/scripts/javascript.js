@@ -1,3 +1,4 @@
+let phoneRegx = /^0\d{10}/
 window.addEventListener('load', function(e){
   let about = document.getElementById('nabout');
   let service = document.getElementById('nservice');
@@ -22,15 +23,26 @@ window.addEventListener('load', function(e){
       break;
   }
   // Other Animation here
-  let tit = document.getElementById('welTitle');
-  if(tit){
+  // let tit = document.getElementById('welTitle');
+  let h1 = document.getElementsByTagName('h1')[0];
+  console.log(h1);
+  if(h1){
     setTimeout(function(){
-      tit.style.transform = "scale(1)";
-      tit.style.transition = "0.2s";
-      tit.style.webkitTransition = "0.2s";
-      tit.style.transitionTimingFunction = "cubic-bezier(0.42,0,0.58,1)";
+      h1.style.transform = "scale(1)";
+      // h1.style.transition = "0.3s";
+      // h1.style.webkitTransition = "0.3s";
+      h1.style.transitionTimingFunction = "cubic-bezier(0.175, 0.885, 0.32, 1.275)";
     }, 200);
   }
+  
+  // if(tit){
+  //   setTimeout(function(){
+  //     tit.style.transform = "scale(1)";
+  //     tit.style.transition = "0.5s";
+  //     tit.style.webkitTransition = "0.5s";
+  //     tit.style.transitionTimingFunction = "cubic-bezier(0.42,0,0.58,1)";
+  //   }, 200);
+  // }
 });
 
 (function RenderNavigation(){
@@ -118,27 +130,27 @@ function readMore(name){
     case "andy":
       let andy = document.getElementById("readMoreAndy");
       andy.style.transform = "scale(1)";
-      andy.style.transition = ".2s";
+      andy.style.transitionTimingFunction = "cubic-bezier(0.175, 0.885, 0.32, 1.275)";
       break
     case "chidi":
       let chidi = document.getElementById("readMoreChidi");
       chidi.style.transform = "scale(1)";
-      chidi.style.transition = ".2s";
+      chidi.style.transitionTimingFunction = "cubic-bezier(0.175, 0.885, 0.32, 1.275)";
       break
     case "lisa":
       let lisa = document.getElementById("readMoreLisa");
       lisa.style.transform = "scale(1)";
-      lisa.style.transition = ".2s";
+      lisa.style.transitionTimingFunction = "cubic-bezier(0.175, 0.885, 0.32, 1.275)";
       break
     case "chai":
       let chai = document.getElementById("readMoreChai");
       chai.style.transform = "scale(1)";
-      chai.style.transition = ".2s";
+      chai.style.transitionTimingFunction = "cubic-bezier(0.175, 0.885, 0.32, 1.275)";
       break
     case "brown":
       let brown = document.getElementById("readMoreBrown");
       brown.style.transform = "scale(1)";
-      brown.style.transition = ".2s";
+      brown.style.transitionTimingFunction = "cubic-bezier(0.175, 0.885, 0.32, 1.275)";
       break
   }
 }
@@ -241,30 +253,12 @@ function closeWindow(name){
           <div class="testifier">
             <i attr="user" class="fas fa-user-circle"></i>
             <small>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              ipsum, dolor sit amet consectetur adipisicing elit. ipsum, dolor sit amet consectetur adipisicing elit.
+              First couple of years into our new business, we struggle to manage our accounting task
+              until we found Chessons Accountants. since then they are resposible for all our accounting task without complain.
             </small>
-            <h2>John Tudy</h2>
+            <h2>Alice Jones</h2>
             <p>Manager CluodFond</p>
           </div>
-          <div class="testifier">
-          <i attr="user" class="fas fa-user-circle"></i>
-          <small>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            ipsum, dolor sit amet consectetur adipisicing elit. ipsum, dolor sit amet consectetur adipisicing elit.
-          </small>
-          <h2>Tony Adams</h2>
-          <p>Manager Network Interface</p>
-        </div>
-        <div class="testifier">
-          <i attr="user" class="fas fa-user-circle"></i>
-          <small>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            ipsum, dolor sit amet consectetur adipisicing elit. ipsum, dolor sit amet consectetur adipisicing elit.
-          </small>
-          <h2>Joseph Alan</h2>
-          <p>Manager Tractor Monster</p>
-        </div>
         </span>
         <span>
             <i onclick="controlLoop(1)" attr="angle" class="material-icons">keyboard_arrow_right</i>
@@ -539,27 +533,6 @@ function getServiceDetails(task) {
  }
 })();
 
-(function callBackFormSubmit(){
-  let callBack = document.getElementById('callBack');
-  if(!callBack){
-    return null;
-  }
-  callBack.addEventListener('click', function(e){
-    e.preventDefault();
-    let ccallName = document.getElementById('ccallName');
-    let ccallPhone = document.getElementById('ccallPhone');
-    let data = {
-      name: ccallName.value,
-      phone: ccallPhone.value
-    }
-    console.log(data);
-    // Refactor later
-    ccallName.value = " ";
-    ccallPhone.value = " ";
-    createCallBack(data);
-  });
-})();
-
 (function contactSubmitForm(){
   const contactButton = document.getElementById('contactButton');
   if(!contactButton){
@@ -585,6 +558,44 @@ function getServiceDetails(task) {
   });
 })();
 
+// Moved All Page Animations to a seperate file
+
+(function callBackFormSubmit(){
+  let callBack = document.getElementById('callBack');
+  if(!callBack){
+    return null;
+  }
+  callBack.addEventListener('click', function(e){
+    e.preventDefault();
+    let ccallName = document.getElementById('ccallName');
+    let ccallPhone = document.getElementById('ccallPhone');
+    let errMsg = document.getElementById('errMsg');
+    let data = {
+      name: ccallName.value,
+      phone: ccallPhone.value
+    }
+    
+    let ph = ccallPhone.value.toString();
+    if(!ccallPhone.value){
+      ccallPhone.style.borderColor = "red";
+      errMsg.style.padding = "10px";
+      errMsg.style.color = "red";
+      errMsg.innerText = "Phone number must be present!!";
+      errMsg.style.transition = "0.4s";
+      return;
+    }
+    if(!phoneRegx.test(ph)){
+      ccallPhone.style.borderColor = "red";
+      errMsg.style.padding = "10px";
+      errMsg.style.color = "red";
+      errMsg.innerText = "Please enter a valid phone number!!";
+      errMsg.style.transition = "0.4s";
+      return;
+    }
+    errMsg.innerText = "";
+    createCallBack(data);
+  });
+})();
 // let img = document.querySelector('#lodImage');
 // img.addEventListener('load', function(e){
 //   console.log("Image loaded", e);

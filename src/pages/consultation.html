@@ -36,23 +36,23 @@
             <form id="cForm" name="cForm">
                 <div class="consult-form-group">
                     <label for="cName">Name</label>
-                    <input name="cName" id="cName" type="text" required placeholder="name">
+                    <input name="cName" id="cName" maxlength="30" type="text" required placeholder="name">
                 </div>
                 <div class="consult-form-group">
                     <label for="cCompany">Company</label>
-                    <input id="cCompany" type="text" placeholder="company">
+                    <input id="cCompany" maxlength="30" type="text" placeholder="company">
                 </div>
                 <div class="consult-form-group">
                     <label for="cEmail">Email</label>
-                    <input id="cEmail" type="email" placeholder="email">
+                    <input id="cEmail" maxlength="30" type="email" placeholder="email">
                 </div>
                 <div class="consult-form-group">
                     <label for="cTel">Telephone</label>
-                    <input id="cTel" type="text" placeholder="telephone">
+                    <input id="cTel" maxlength="11" type="text" placeholder="telephone">
                 </div>
                 <div class="consult-form-group">
                     <label for="cMessage">Message</label>
-                    <textarea id="cMessage" type="text" cols="30" rows="5" placeholder="message"></textarea>
+                    <textarea id="cMessage" maxlength="225" type="text" cols="30" rows="5" placeholder="message"></textarea>
                 </div>
                 <div class="consult-form-group">
                     <a id="cButton" type="button">Submit</a>
@@ -83,6 +83,11 @@
     </div>
     <!-- User data submit respond -->
     <div id="respond" class="respond"></div>
+    <div id="progress" class="progress">
+        <div class="indicator">
+            <div class="spin"></div>
+        </div>
+    </div>
     <!-- <script src="app.js"></script> -->
     <script src="./main.js"></script>
 </body>

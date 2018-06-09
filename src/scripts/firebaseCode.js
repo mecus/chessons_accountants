@@ -12,6 +12,7 @@ function createXhrCorsRequest(method, url){
 }
 
 function createCallBack(data){
+    startProgress();
     let url = `https://us-central1-chesson-b9447.cloudfunctions.net/phoneMeBack?name=${data.name}&phone=${data.phone}`;
     const xmlHttp = createXhrCorsRequest("GET", url);
     if(!xmlHttp){
@@ -19,7 +20,12 @@ function createCallBack(data){
         return;
     }
     xmlHttp.onload = function(){
-        let resText = xmlHttp.responseText;
+        // let resText = xmlHttp.responseText;
+        let resText = {
+            type: "callback",
+            head: "Thanks for submitting your number",
+            msg: "One of our team will call you shortly"
+        }
         successRespondStatus(resText);
     }
     xmlHttp.onerror = function() {
@@ -29,6 +35,7 @@ function createCallBack(data){
 }
 
 function createContact(contact){
+    startProgress();
     const url  = `https://us-central1-chesson-b9447.cloudfunctions.net/userContact?name=${contact.name}&email=${contact.email}&message=${contact.message}`;
     const xmlHttp = createXhrCorsRequest("GET", url);
     if(!xmlHttp){
@@ -37,7 +44,12 @@ function createContact(contact){
     }
     xmlHttp.onload = function() {
         let resp = xmlHttp.responseText;
-        successRespondStatus(resp);
+        let resText = {
+            type: "contact",
+            head: "Thanks for contacting us",
+            msg: "We will get in touch with you shortly"
+        }
+        successRespondStatus(resText);
       };
     xmlHttp.onerror = function(){
         failureRespondStatus();
@@ -46,6 +58,7 @@ function createContact(contact){
 }
 
 function createConsultation(data){
+    startProgress();
     const url  = `https://us-central1-chesson-b9447.cloudfunctions.net/freeConsultation?name=${data.name}&email=${data.email}&message=${data.message}&company=${data.company}&phone=${data.phone}`;
 
     const xmlHttp = createXhrCorsRequest("GET", url);
@@ -55,7 +68,12 @@ function createConsultation(data){
     }
     xmlHttp.onload = function() {
         let resp = xmlHttp.responseText;
-        successRespondStatus(resp);
+        let resText = {
+            type: "consultation",
+            head: "Thanks for submitting your details",
+            msg: "We will get in touch with you shortly"
+        }
+        successRespondStatus(resText);
       };
     xmlHttp.onerror = function(){
         failureRespondStatus();
@@ -64,18 +82,43 @@ function createConsultation(data){
 }
 
 function successRespondStatus(code){
-    console.log("XHR RESP:", code);
+    endProgress();
     let resDiv = document.getElementById('respond');
-    resDiv.innerHTML = `
-    <div class="msg">
-        <i onclick="closeWindows()" class="material-icons">close</i>
-        <h1> Thanks for contacting us!!</h1>
-        <p>Your message was send successfully..</p>
-    </div>
-    `
-    resDiv.style.display = "block";
+    switch(code.type){
+        case "callback":
+            resDiv.innerHTML = `
+            <div class="msg">
+                <i onclick="closeWindows()" class="material-icons">close</i>
+                <h1> ${code.head} </h1>
+                <p> ${code.msg} </p>
+            </div>
+            `
+            resDiv.style.display = "block";
+            break;
+        case "contact":
+            resDiv.innerHTML = `
+            <div class="msg">
+                <i onclick="closeWindows()" class="material-icons">close</i>
+                <h1> ${code.head} </h1>
+                <p> ${code.msg} </p>
+            </div>
+            `
+            resDiv.style.display = "block";
+            break;
+        case "consultation":
+            resDiv.innerHTML = `
+            <div class="msg">
+                <i onclick="closeWindows()" class="material-icons">close</i>
+                <h1> ${code.head} </h1>
+                <p> ${code.msg} </p>
+            </div>
+            `
+            resDiv.style.display = "block";
+            break;
+    }
 }
 function failureRespondStatus(){
+    endProgress();
     let resDiv = document.getElementById('respond');
     resDiv.innerHTML = `
     <div class="msg">
@@ -89,4 +132,27 @@ function failureRespondStatus(){
 function closeWindows(){
     let resDiv = document.getElementById('respond');
     resDiv.style.display = "none";
+    window.location.reload();
+}
+
+let timeOut;
+function startProgress(){
+    let progress = document.getElementById('progress');
+    let spin = document.querySelector('.spin');
+    progress.style.display = "block";
+    let count = 0;
+    timeOut = setInterval(function(){
+        spin.style.transform = "rotate" + "(" + count + "deg)";
+        count += 5;
+        if(count === 360){
+            count = 0;
+        }
+        
+    }, 10);
+}
+function endProgress(){
+    clearInterval(timeOut);
+    let progress = document.getElementById('progress');
+    progress.style.display = "none";
+
 }
