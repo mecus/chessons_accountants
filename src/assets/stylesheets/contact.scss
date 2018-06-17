@@ -67,9 +67,9 @@
     }
 }
 /* Tablet Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
+@media screen 
+  and (min-width: 768px)
+  and (max-width: 1024px)
 //   and (-webkit-min-device-pixel-ratio: 1) 
   {
     .contact-container{
@@ -150,9 +150,9 @@
   }
 
 /* Desktop Portrait and Landscape */
-@media only screen 
-and (min-device-width: 1200px) 
-and (max-device-width: 1600px) 
+@media screen 
+and (min-width: 1025px) 
+and (max-width: 1600px) 
 // and (-webkit-min-device-pixel-ratio: 1) 
 {
     .contact-container{
@@ -240,6 +240,102 @@ and (max-device-width: 1600px)
             overflow: hidden;
             iframe{
                 width: 100%;
+                height: 400px;
+            }
+        }
+    }
+}
+/* Desktop Portrait and Landscape */
+@media screen 
+and (min-width: 1601px) 
+// and (-webkit-min-device-pixel-ratio: 1) 
+{
+    .contact-container{
+        width: 100%;
+        // padding: 0px 20%;
+        h1{
+            margin-left: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+        .contact{
+            padding: 0px 20%;
+            padding: 20px;
+            text-align: center;
+            h2{
+                font-size: 1.5em;
+            }
+            h2, p{
+                padding: 0;
+                margin: 0;
+                opacity: 0.8;
+            }
+            p{
+                font-size: 1.2em;
+            }
+            h2 ~ p{
+                margin-top: 10px;
+                padding: 0;
+            }
+        }
+        .contact-form{
+            padding: 20px;
+            padding: 0px 30%;
+            form{
+                border: 1px solid #BC204B;
+                padding: 20px;
+                margin-bottom: 20px;
+                p[attr=instruct]{
+                    display: block;
+                    padding: 20px 0px;
+                    font-size: 1em;
+                    color: #BC204B;
+                }
+                .input-group{
+                    display: flex;
+                    margin-bottom: 10px;
+                    label{
+                        width: 140px;
+                        font-size: 1em;
+                        font-weight: bold;
+                    }
+                    input{
+                        border: 1px solid lightgray;
+                        background-color: lighten(lightgrey, 15%);
+                        // padding: 5px;
+                        width: 100%;
+                        height: 30px;
+                        font-size: 1em;
+                        padding: 5px;
+                    }
+                    textarea{
+                        border: 1px solid lightgray;
+                        background-color: lighten(lightgrey, 15%);
+                        width: 100%;
+                        font-size: 1em;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                    }
+                    a#contactButton{
+                        width: 100%;
+                        height: 35px;
+                        background-color: #BC204B;
+                        font-size: 1em;
+                        color: #ffffff;
+                        border-color: #BC204B;
+                        text-align: center;
+                        padding: 5px;
+                        line-height: 35px;
+                    }
+                }
+            }
+    
+        }
+        .contact-map{
+            overflow: hidden;
+            iframe{
+                width: 100%;
+                height: 500px;
             }
         }
     }

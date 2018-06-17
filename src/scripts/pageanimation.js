@@ -108,7 +108,7 @@
       }
       if(footer){
         let foot = footer.offsetTop;
-        if(window.pageYOffset >= foot - 400){
+        if(window.pageYOffset >= foot - 600){
           footer.style.transform = "scale(1)";
           footer.style.transitionTimingFunction = "cubic-bezier(0.175, 0.885, 0.32, 1.275)";
         }

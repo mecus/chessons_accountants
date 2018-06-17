@@ -232,6 +232,9 @@ function closeWindow(name){
         <i class="far fa-copyright"></i>
         <p>Copyright 2018 Chessons Allright Reserved</p>
     </span>
+    <span class="developer">
+      <a href="http://miscotech.co.uk">Powered by MISCOTECH</a>
+    </span>
     </div>
 
   `
@@ -253,8 +256,8 @@ function closeWindow(name){
           <div class="testifier">
             <i attr="user" class="fas fa-user-circle"></i>
             <small>
-              First couple of years into our new business, we struggle to manage our accounting task
-              until we found Chessons Accountants. since then they are resposible for all our accounting task without complain.
+              First couple of years into our new business, we struggle to cope with our accounting task
+              until we found Chessons Accountants. since then they handle all our accounting task.
             </small>
             <h2>Alice Jones</h2>
             <p>Manager CluodFond</p>

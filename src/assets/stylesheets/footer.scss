@@ -74,7 +74,9 @@
     height: 40px;
     width: 100%;
     background-color: #35414C;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     span{
         display: flex;
         padding: 0 20px;
@@ -91,12 +93,15 @@
             margin-right: 5px;
         }
     }
+    span.developer{
+        display: none;
+    }
 }
 
   /* Portrait and Landscape  for Table */
-  @media only screen 
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px) 
+  @media screen 
+  and (min-width: 768px)
+  and (max-width: 1024px) 
 //   and (-webkit-min-device-pixel-ratio: 1) 
   {
     // Footer section
@@ -150,13 +155,15 @@
         height: 40px;
         width: 100%;
         background-color: #35414C;
-
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         span{
             display: flex;
             padding: 0 20px;
             p{
                 color: lightgrey;
-                font-size: .8em;
+                font-size: .9em;
                 line-height: 40px;
                 margin: 0;
                 padding: 0;
@@ -167,12 +174,24 @@
                 margin-right: 5px;
             }
         }
+        span.developer{
+            display: block;
+            line-height: 40px;
+
+            a{
+                font-size: 1em;
+                color: lightgrey;
+                opacity: 0.5;
+
+            }
+
+        }
     }
 }
   /* Portrait and Landscape  for Desktop */
-@media only screen 
-and (min-device-width: 1200px)
-and (max-device-width: 1600px)
+@media screen 
+and (min-width: 1025px)
+and (max-width: 1600px)
 // and (-webkit-min-device-pixel-ratio: 1) 
 {
 
@@ -261,7 +280,134 @@ and (max-device-width: 1600px)
         height: 40px;
         width: 100%;
         background-color: #35414C;
-    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        span{
+            display: flex;
+            padding: 0 20px;
+            p{
+                color: lightgrey;
+                font-size: 0.9em;
+                line-height: 40px;
+                margin: 0;
+                padding: 0;
+            }
+            i{
+                color: lightgrey;
+                line-height: 40px;
+                margin-right: 5px;
+            }
+        }
+        span.developer{
+            display: block;
+            line-height: 40px;
+
+            a{
+                font-size: 1em;
+                color: lightgrey;
+                opacity: 0.5;
+                &:hover{
+                    opacity: 0.6
+                }
+            }
+        }
+    }
+}
+  /* Portrait and Landscape  for Desktop */
+  @media screen 
+  and (min-width: 1601px)
+  // and (-webkit-min-device-pixel-ratio: 1) 
+  {
+  
+      .footer{
+          position: relative;
+          background-color: #1D3557;
+          height: 550px;
+          overflow: hidden;
+          img{
+              width: 100%;
+              height: 550px;
+              opacity: .5;
+          }
+          .company-info{
+              position: absolute;
+              top: 0;
+              left: 50%;
+              width: 60%;
+              margin-left: -30%;
+              display: flex;
+              justify-content: space-between;
+              .about-us{
+                display: block;
+                background-color: rgba(255, 255, 224, .6);
+                margin-right: 120px;
+                margin-top: 80px;
+                padding: 20px;
+              }
+              .contacts{
+              position: relative;
+              top: 0;
+              // left: 50%;
+              // width: 340px;
+              // margin-left: -170px;
+              background-color: rgba(255, 153, 0, .9);
+              height: 250px;
+              margin-top: 80px;
+              padding-bottom: 10px;
+              padding: 20px;
+              h1{
+                  // color: darkgray;
+                  font-size: 1.2em;
+                  padding-left: 10px;
+                  padding-top: 10px;  
+              }
+              h2, p{
+                  padding: 0;
+                  margin: 0;
+                  padding-left: 20px;
+              }
+              h2{
+                  font-size: 1em;
+              }
+              p{
+                  padding-left: 10px; 
+                  font-size: 1em; 
+              }
+              p[attr=tel]{
+                  padding-top: 10px;
+              }
+              }
+          }
+          .socials{
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // background-color: #345578;
+            left: 50%;
+            width: 340px;
+            margin-left: -170px;
+            margin-bottom: 20px;
+            i{
+                font-size: 1.8em;
+                border: 2px solid #ffffff;
+                padding: 8px;
+                border-radius: 15px;
+                color: #ffffff;
+                opacity: .7;
+            }
+          }
+          
+      }
+      .slim-footer{
+        height: 40px;
+        width: 100%;
+        background-color: #35414C;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         span{
             display: flex;
             padding: 0 20px;
@@ -278,5 +424,17 @@ and (max-device-width: 1600px)
                 margin-right: 5px;
             }
         }
+        span.developer{
+            display: block;
+            line-height: 40px;
+            a{
+                font-size: 1em;
+                color: lightgrey;
+                opacity: 0.5;
+                &:hover{
+                    opacity: 0.6; 
+                }
+            }
+        }
     }
-}
+  }

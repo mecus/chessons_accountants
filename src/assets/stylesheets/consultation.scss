@@ -51,9 +51,9 @@
     }
 }
 /* Tablet Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px)
+@media screen 
+  and (min-width: 768px)
+  and (max-width: 1024px)
 //   and (-webkit-min-device-pixel-ratio: 1) 
   {
     .consultation-container{
@@ -112,9 +112,9 @@
     }
   }
     /* Desktop Portrait and Landscape */
-@media only screen 
-and (min-device-width: 1200px) 
-and (max-device-width: 1600px) 
+@media screen 
+and (min-width: 1025px) 
+and (max-width: 1600px) 
 // and (-webkit-min-device-pixel-ratio: 1) 
 {
     .consultation-container{
@@ -131,6 +131,69 @@ and (max-device-width: 1600px)
             }
             p{font-size: 1.1em; font-weight: bold;}
            
+        }
+        .consultation-form{
+            h1{
+                padding-left: 20px;
+                margin: 20px 0px;
+            }
+            form{
+                padding: 20px;
+                .consult-form-group{
+                    label{
+                        width: 140px;
+                        margin-right: 10px;
+                        padding: 10px;
+                        font-size: 1em;
+                        font-weight: bold;
+                    }
+                    input, textarea{
+                        border: 1px solid lightgrey;
+                        padding: 10px;
+                        margin: 5px 0px;
+                        width: 100%;
+                        font-size: 1em;
+                    }
+                    a#cButton{
+                        width: 100%;
+                        height: 40px;
+                        font-size: 1.5em;
+                        background-color: #FF9900;
+                        border-color: #FF9900;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        padding: 5px;
+                        text-align: center;
+                        line-height: 40px;
+                        color: #000000;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Desktop Portrait and Landscape for Large Screen */
+@media screen 
+and (min-width: 1601px) 
+// and (-webkit-min-device-pixel-ratio: 1) 
+{
+    .consultation-container{
+        padding: 0px 20%;
+        .consultation{
+            h1{font-size: 1.6em;} h2{font-size: 1em;}
+            ol li{
+                font-size: 1em;
+                padding: 20px 5px;
+                border: none;
+            }
+            ol{
+                margin-bottom: 40px;
+            }
+            p{font-size: 1.1em; font-weight: bold;}
+            
         }
         .consultation-form{
             h1{
