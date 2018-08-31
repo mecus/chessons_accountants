@@ -1,4 +1,14 @@
 let phoneRegx = /^0\d{10}/
+
+function goToto(){
+  let isSmoothScrollSupported = 'scrollBehavior' in document.documentElement.style;
+  let option = {
+    "behavior": "smooth",
+    "left": 0,
+    "top": 0
+  }
+  window.scrollTo(option);
+}
 window.addEventListener('load', function(e){
   let about = document.getElementById('nabout');
   let service = document.getElementById('nservice');
@@ -25,7 +35,6 @@ window.addEventListener('load', function(e){
   // Other Animation here
   // let tit = document.getElementById('welTitle');
   let h1 = document.getElementsByTagName('h1')[0];
-  console.log(h1);
   if(h1){
     setTimeout(function(){
       h1.style.transform = "scale(1)";
@@ -206,10 +215,11 @@ function closeWindow(name){
         </div>
         <div class="contacts">
           <h1>Where we live</h1>
-          <h2>1 St Mark Street</h2>
-          <h2>E1 8DA</h2>
+          <h2>Suite 204 Regent House Business Centre</h2>
+          <h2>291 Kirkdale</h2>
           <h2>London</h2>
-          <p attr="tel"><strong>Tel:</strong> 0207 26411942, 07966001101</p>
+          <h2>SE26 4QD</h2>
+          <p attr="tel"><strong>Tel:</strong> 0203 6014 646, 07966001101</p>
           <p><strong>Fax:</strong> 0207 377 5721</p>
           <p><strong>Email:</strong> info@chessonsaccountants.com</p>
         </div>

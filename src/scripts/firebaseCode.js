@@ -1,84 +1,104 @@
-function createXhrCorsRequest(method, url){
-    let xhr = new XMLHttpRequest();
-    if("withCredentials" in xhr){
-        xhr.open(method, url, true);
-    }else if(typeof XDomainRequest != "undefined"){
-        xhr = new XDomainRequest();
-        xhr.open(method, url);
-    }else{
-        xhr = null;
-    }
-    return xhr;
+// Using fetch api to make an http request to the mail server
+var basedEmail = "info@chessonsaccountants.com";
+function httpPostFetch(data) {
+    let url = "https://miscotech-mail-app.herokuapp.com/mail";
+    return fetch(url, {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        },
+        redirect: "follow",
+        referrer: "no-referrer",
+        body: JSON.stringify(data)
+    }).then(res => res.json());
 }
 
 function createCallBack(data){
     startProgress();
-    let url = `https://us-central1-chesson-b9447.cloudfunctions.net/phoneMeBack?name=${data.name}&phone=${data.phone}`;
-    const xmlHttp = createXhrCorsRequest("GET", url);
-    if(!xmlHttp){
-        alert("Your browser don't support xhr");
-        return;
+    let body = {
+        to: basedEmail,
+        subject: "Call Back Request",
+        html: `
+        <strong>You need to call this customer back ASAP</strong>\n
+        Name: ${data.name}\n
+        Telephone: ${data.phone}\n
+        `,
+        text: `
+        You need to call this customer back ASAP
+        Name: ${data.name},
+        Telephone: ${data.phone} .
+        `
     }
-    xmlHttp.onload = function(){
-        // let resText = xmlHttp.responseText;
-        let resText = {
-            type: "callback",
-            head: "Thanks for submitting your number",
-            msg: "One of our team will call you shortly"
-        }
-        successRespondStatus(resText);
+    let resText = {
+        type: "callback",
+        head: "Thanks for submitting your number",
+        msg: "One of our team will call you shortly"
     }
-    xmlHttp.onerror = function() {
+    httpPostFetch(body)
+    .then(function(response){
+        successRespondStatus(resText)
+    })
+    .catch(function(err){
         failureRespondStatus();
-      };
-    xmlHttp.send();
+    });
 }
 
 function createContact(contact){
     startProgress();
-    const url  = `https://us-central1-chesson-b9447.cloudfunctions.net/userContact?name=${contact.name}&email=${contact.email}&message=${contact.message}`;
-    const xmlHttp = createXhrCorsRequest("GET", url);
-    if(!xmlHttp){
-        alert("Your Browser don't support XHR!!");
-        return;
+    let body = {
+        to: basedEmail,
+        subject: "New Contact Submited",
+        html: `
+        <strong>You just got a new contact from your website</strong>..\n
+        <p><strong>Name:</strong> ${contact.name} </p>\n
+        <p><strong>Email:</strong> ${contact.email} </p>\n
+        <p><strong>Message:</strong> ${contact.message} </p>\n
+        `
     }
-    xmlHttp.onload = function() {
-        let resp = xmlHttp.responseText;
-        let resText = {
-            type: "contact",
-            head: "Thanks for contacting us",
-            msg: "We will get in touch with you shortly"
-        }
+    let resText = {
+        type: "contact",
+        head: "Thanks for contacting us",
+        msg: "We will get in touch with you shortly"
+    }
+
+    httpPostFetch(body)
+    .then(function(resp){
         successRespondStatus(resText);
-      };
-    xmlHttp.onerror = function(){
+    })
+    .catch(function(err){
         failureRespondStatus();
-    }
-    xmlHttp.send();
+    });
 }
 
 function createConsultation(data){
     startProgress();
-    const url  = `https://us-central1-chesson-b9447.cloudfunctions.net/freeConsultation?name=${data.name}&email=${data.email}&message=${data.message}&company=${data.company}&phone=${data.phone}`;
-
-    const xmlHttp = createXhrCorsRequest("GET", url);
-    if(!xmlHttp){
-        alert("Your Browser don't support XHR!!");
-        return;
+    let body = {
+        to: basedEmail,
+        subject: "Consultation Request",
+        html: `
+        <strong>A customer is requesting a consultation from your website</strong>..\n
+        <p><strong>Name:</strong> ${data.name} </p>\n
+        <p><strong>Company:</strong> ${data.company} </p>\n
+        <p><strong>Email:</strong> ${data.email} </p>\n
+        <p><strong>Telephone:</strong> ${data.phone} </p>\n
+        <p><strong>Message:</strong> ${data.message} </p>\n
+        `
     }
-    xmlHttp.onload = function() {
-        let resp = xmlHttp.responseText;
-        let resText = {
-            type: "consultation",
-            head: "Thanks for submitting your details",
-            msg: "We will get in touch with you shortly"
-        }
+    let resText = {
+        type: "consultation",
+        head: "Thanks for submitting your details",
+        msg: "We will get in touch with you shortly"
+    }
+    httpPostFetch(body)
+    .then(function (resp) {
         successRespondStatus(resText);
-      };
-    xmlHttp.onerror = function(){
+    })
+    .catch(function (err) {
         failureRespondStatus();
-    }
-    xmlHttp.send();
+    });  
 }
 
 function successRespondStatus(code){

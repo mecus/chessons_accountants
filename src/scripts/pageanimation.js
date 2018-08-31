@@ -37,6 +37,38 @@
     // scroll event handlers
     window.addEventListener('scroll', function(e){
       e.preventDefault();
+      let headtitle = this.document.getElementById('head-title');
+      let topPage = document.getElementById('goTop');
+      if(window.pageYOffset > 500){
+        topPage.style.opacity = "1";
+      }else{
+        topPage.style.opacity = "0";
+      }
+      // Header text animation
+      if(headtitle){
+        if(window.pageYOffset > 50){
+          headtitle.style.transform = "scale(0.8)";
+          headtitle.style.transition = ".5s";
+        }else{
+          headtitle.style.transform = "scale(1)";
+          headtitle.style.transition = ".5s";
+        }
+        if(window.pageYOffset > 100){
+          headtitle.style.transform = "scale(0.5)";
+          headtitle.style.transition = ".5s";
+        }else{
+          headtitle.style.transform = "scale(1)";
+          headtitle.style.transition = ".5s";
+        }
+        if(window.pageYOffset > 150){
+          headtitle.style.transform = "scale(0.2)";
+          headtitle.style.transition = ".5s";
+        }else{
+          headtitle.style.transform = "scale(1)";
+          headtitle.style.transition = ".5s";
+        }
+
+      }
       if(sSection){
           let SS = sSection.offsetTop;
           if(window.pageYOffset >= SS -300){

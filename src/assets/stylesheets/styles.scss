@@ -470,6 +470,26 @@ and (min-width: 1025px)
         }
     }
 }
-
-// @import './index.scss';
-// @import './about.scss';
+.goTop{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 4%;
+    margin-bottom: 42px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1000;
+    i{
+        font-size: 2.5rem;
+        background-color: lighten(#BC204B, 1%);
+        border-radius: 50%;
+        color: #ffffff;
+        opacity: .6;
+        &:hover{
+            cursor: pointer;
+            background-color: lighten(#BC204B, 15%);
+            color: #ffffff;
+            opacity: 1;
+        }
+    }
+}

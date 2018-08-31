@@ -1,9 +1,11 @@
 
-var CACHE_NAME = 'chessonV1';
+var CACHE_NAME = 'chessonV5';
 var urlsToCache = [
   '/',
   '/main.css',
-  '/main.js'
+  '/main.min.js',
+  'https://use.fontawesome.com/releases/v5.0.10/css/all.css',
+  'https://fonts.googleapis.com/icon?family=Material+Icons'
 ];
 
 self.addEventListener('install', function(event) {
@@ -58,7 +60,7 @@ self.addEventListener('fetch', function(event) {
 });
 self.addEventListener('activate', function(event) {
 
-    var cacheWhitelist = ['chessonV1'];
+    var cacheWhitelist = ['chessonV5'];
 
     event.waitUntil(
         caches.keys().then(function(cacheNames) {

@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Accounting, Bookkeeping, Taxation, Services">
+    <meta name="description" content="Chartered Certified Accountants / Business Consultants">
+    <meta name="description" content="Supporting your Business by adding values">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css" >
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script> -->
     <title>Welcome to Chessons</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125067845-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-125067845-1');
+    </script>
 </head>
 <body>
     <!-- Rendered Navigation from js -->
@@ -19,7 +31,7 @@
     <div class="home-container">
         <div class="app-header">
             <div class="filter-layer"></div>
-            <div class="head-title">
+            <div id="head-title" class="head-title">
                 <h1 id="welTitle">Chartered Certified Accountants / Business Consultants</h1>
                 <p>Supporting your Business</p>
                 <p>by Adding Value.</p>
@@ -33,22 +45,22 @@
                 <div class="service">
                     <i class="fas fa-book"></i>
                     <h1>Accounting / Bookkeeping</h1>
-                    <a href="">see all</a>
+                    <a href="./services.html">see all</a>
                 </div>
                 <div class="service">
                     <i class="fas fa-chart-line"></i>
-                    <h1>Business Startup / Payroll</h1>
-                    <a href="">see all</a>
+                    <h1>Business Consultants</h1>
+                    <a href="./services.html">see all</a>
                 </div>
                 <div class="service">
                     <i class="fas fa-tasks"></i>
-                    <h1>Income Tax / Self-Assessment</h1>
-                    <a href="">see all</a>
+                    <h1>Taxation</h1>
+                    <a href="./services.html">see all</a>
                 </div>
                 <div class="service">
                     <i class="fas fa-building"></i>
-                    <h1>Business Tax / Company Formation</h1>
-                    <a href="">see all</a>
+                    <h1>Business Startup / Company Formation</h1>
+                    <a href="./services.html">see all</a>
                 </div>
             </div>
         </div>
@@ -65,7 +77,7 @@
         </div>
         <!-- Who we serve section -->
         <div class="audience">
-            <h1 id="audHead" attr="title">Who We Serve</h1>
+            <h1 id="audHead" attr="title">Who We Serve?</h1>
             <div class="audience-wrapper">
                 <div class="player">
                 <span class="icon">
@@ -159,8 +171,10 @@
     </div>
     </div>
     <div class="texty" id="textimony"></div>
+    <div id="goTop" onclick="goToto()" class="goTop">
+        <i class="material-icons">expand_less</i>
+    </div>
     <div class="footy" id="footer"></div>
-
     <!-- Mobile Menu -->
     <div id="mob-menu" class="mobile-menu">
         <!-- <i onclick="closeMenu()" attr="close-ic" class="fas fa-times"></i> -->
@@ -186,7 +200,7 @@
             <div class="spin"></div>
         </div>
     </div>
-    <!-- <script src="app.js"></script> -->
     <script async src="main.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
