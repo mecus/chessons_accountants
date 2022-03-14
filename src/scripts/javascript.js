@@ -215,10 +215,10 @@ function closeWindow(name){
         </div>
         <div class="contacts">
           <h1>Where we live</h1>
-          <h2>Suite 204 Regent House Business Centre</h2>
-          <h2>291 Kirkdale</h2>
+          <h2>Office 0201, Self Storage</h2>
+          <h2>3 Stanton Way, Sydenham</h2>
           <h2>London</h2>
-          <h2>SE26 4QD</h2>
+          <h2>SE26 4FU</h2>
           <p attr="tel"><strong>Tel:</strong> 0203 6014 646, 07966001101</p>
           <p><strong>Fax:</strong> 0207 377 5721</p>
           <p><strong>Email:</strong> info@chessonsaccountants.com</p>

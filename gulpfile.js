@@ -1,5 +1,5 @@
-let gulp = require("gulp");
-let sass = require("gulp-sass");
+// let gulp = require("gulp");
+// let sass = require("gulp-sass");
 let minify = require('gulp-minify');
 let concat = require('gulp-concat');
 let sourcemaps = require("gulp-sourcemaps");
@@ -8,55 +8,63 @@ let sequence = require('run-sequence');
 let ts = require('gulp-typescript');
 let plumber = require('gulp-plumber');
 
-gulp.task("transpileJs", function () {
-    return gulp.src("src/scripts/*.js")
+const sass = require('gulp-sass')(require('sass'));
+const { src, dest, watch, series } = require('gulp');
+
+function transpileJs() {
+    return src("src/scripts/*.js")
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(babel())
         .pipe(concat("main.js"))
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("dist"));
-  });
+        .pipe(dest("dist"));
+};
 
 
-gulp.task("sass", function(){
-    return gulp.src('./src/assets/stylesheets/*.scss')
+function gulpsass(){
+    return src('./src/assets/stylesheets/*.scss')
     .pipe(concat('main.css'))
     .pipe(minify())
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest('./dist'));
-});
-gulp.task('js:watch', function () {
-    gulp.watch('./src/scripts/*.js', ['transpileJs']);
-});
-gulp.task('sass:watch', function () {
-    gulp.watch('./src/assets/stylesheets/*.scss', ['sass']);
-});
-gulp.task('html:watch', function () {
-    gulp.watch('./src/pages/*.html', ['copy:pages']);
- 
-});
+    .pipe(dest('./dist'));
+};
 
-gulp.task('copy:pages', function(){
-    return gulp.src("src/pages/*.html")
-    .pipe(gulp.dest("dist"))
-});
-gulp.task('copy:images', function(){
-    return gulp.src(
+function jswatch() {
+    return watch('./src/scripts/*.js', ['transpileJs']);
+};
+function sasswatch() {
+    watch('./src/assets/stylesheets/*.scss', ['sass'], function(cb){
+        return cb();
+    });
+};
+function htmlwatch() {
+    return watch('./src/pages/*.html', ['copy:pages']);
+ 
+};
+
+function copypages(){
+    return src("src/pages/*.html")
+    .pipe(dest("dist"))
+};
+function copyimages(){
+    return src(
         [
             "src/assets/images/*.jpg", "src/assets/images/*.jpeg", 
             "src/assets/images/*.png"
         ]
-    ).pipe(gulp.dest("dist/assets/images"))
-});
-gulp.task('copy:pwa-code', function(){
-    return gulp.src(["src/pwa/*.js", "src/pwa/*.json"])
-        .pipe(gulp.dest("dist"))
-});
-gulp.task('default', 
-    [
-        'copy:pages', 'copy:images', 'copy:pwa-code',
-        'sass', 'sass:watch', 'html:watch', 
-        'transpileJs', 'js:watch'
-    ]
-);
+    ).pipe(dest("dist/assets/images"))
+};
+function copypwa(){
+    return src(["src/pwa/*.js", "src/pwa/*.json"])
+        .pipe(dest("dist"))
+};
+exports.default = series(copypages, copyimages, copypwa, gulpsass, 
+     transpileJs);
+// gulp.task('default', 
+//     [
+//         'copy:pages', 'copy:images', 'copy:pwa-code',
+//         'sass', 'sass:watch', 'html:watch', 
+//         'transpileJs', 'js:watch'
+//     ]
+// );
